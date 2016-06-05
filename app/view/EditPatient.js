@@ -36,7 +36,7 @@ Ext.define('hurricane.view.EditPatient', {
     width: 400,
     frameHeader: false,
     header: false,
-    title: 'My Panel',
+    title: 'Patienten Anzeigen',
     defaultListenerScope: true,
 
     items: [
@@ -46,7 +46,7 @@ Ext.define('hurricane.view.EditPatient', {
             id: 'frmEditPatient',
             itemId: 'myform',
             bodyPadding: 10,
-            title: 'My Form',
+            title: 'Patienten Anzeigen',
             items: [
                 {
                     xtype: 'displayfield',
@@ -58,40 +58,47 @@ Ext.define('hurricane.view.EditPatient', {
                 {
                     xtype: 'textfield',
                     fieldLabel: 'Name',
-                    name: 'Name'
+                    name: 'Name',
+                    readOnly: false
                 },
                 {
                     xtype: 'textfield',
                     fieldLabel: 'Vorname',
-                    name: 'Vorname'
+                    name: 'Vorname',
+                    readOnly: false
                 },
                 {
                     xtype: 'datefield',
                     fieldLabel: 'Geburtsdatum',
                     name: 'Geburtsdatum',
+                    readOnly: false,
                     format: 'd.m.Y',
                     submitFormat: 'Y-m-d'
                 },
                 {
                     xtype: 'textfield',
                     fieldLabel: 'Strasse',
-                    name: 'Strasse'
+                    name: 'Strasse',
+                    readOnly: false
                 },
                 {
                     xtype: 'textfield',
                     fieldLabel: 'Plz',
-                    name: 'PLZ'
+                    name: 'PLZ',
+                    readOnly: false
                 },
                 {
                     xtype: 'textfield',
                     fieldLabel: 'Ort',
-                    name: 'Ort'
+                    name: 'Ort',
+                    readOnly: false
                 },
                 {
                     xtype: 'combobox',
                     id: 'frmFldGeschlecht',
                     fieldLabel: 'Geschlecht',
                     name: 'GeschlechtID',
+                    readOnly: false,
                     displayField: 'Beschreibung',
                     queryMode: 'local',
                     store: 'Geschlecht',
@@ -112,7 +119,7 @@ Ext.define('hurricane.view.EditPatient', {
                             formBind: true,
                             itemId: 'saveButton',
                             margin: 5,
-                            text: 'Save',
+                            text: 'Speichern',
                             listeners: {
                                 click: {
                                     fn: 'onSave',
@@ -125,7 +132,7 @@ Ext.define('hurricane.view.EditPatient', {
                             flex: 1,
                             itemId: 'cancelButton',
                             margin: 5,
-                            text: 'Cancel',
+                            text: 'Abbrechen',
                             listeners: {
                                 click: {
                                     fn: 'onCancel',

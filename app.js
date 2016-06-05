@@ -41,7 +41,7 @@ Ext.application({
         'PatientenListView',
         'EditPatient',
         'Protokoll',
-        'Protokolls'
+        'Dateneingabe'
     ],
     name: 'hurricane',
 

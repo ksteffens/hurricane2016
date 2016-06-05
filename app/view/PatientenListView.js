@@ -29,6 +29,7 @@ Ext.define('hurricane.view.PatientenListView', {
     viewModel: {
         type: 'patientenlistview'
     },
+    dock: 'top',
     frameHeader: false,
     header: false,
     title: 'My Panel',

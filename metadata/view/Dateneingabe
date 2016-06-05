@@ -1,0 +1,132 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "bodyBorder": true,
+        "container|align": "stretch",
+        "designer|userAlias": "dateneingabe",
+        "designer|userClassName": "Dateneingabe",
+        "dock": "left",
+        "frameHeader": false,
+        "header": false,
+        "height": null,
+        "layout": "vbox",
+        "title": "My Panel",
+        "width": 300
+    },
+    "name": "MyPanel6",
+    "designerId": "e45445e9-748a-4cf9-892f-e7ccb80d736f",
+    "viewControllerInstanceId": "159afe5c-7a8f-40cf-ad4c-b659301d100d",
+    "viewModelInstanceId": "7c47aa01-93b3-4dc4-abf3-595b5a92bdd8",
+    "cn": [
+        {
+            "type": "Ext.grid.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dock": null,
+                "layout|flex": 1,
+                "store": "Patient",
+                "title": "Patienten Liste",
+                "width": 300
+            },
+            "name": "MyGridPanel3",
+            "designerId": "ff1073c7-a87f-4c77-8985-d396deec7a3c",
+            "cn": [
+                {
+                    "type": "Ext.view.Table",
+                    "reference": {
+                        "name": "viewConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "border": 1,
+                        "dock": "left",
+                        "width": 300
+                    },
+                    "name": "MyTable1",
+                    "designerId": "0b24bfee-e16e-4839-9d21-796f120ec762"
+                },
+                {
+                    "type": "Ext.grid.column.Number",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "patientID",
+                        "hidden": true,
+                        "text": "Patient Id"
+                    },
+                    "name": "MyNumberColumn9",
+                    "designerId": "2744f9db-1c69-41f3-9349-a7af3a154f75"
+                },
+                {
+                    "type": "Ext.grid.column.Template",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "border": null,
+                        "dataIndex": "Name",
+                        "defaultWidth": null,
+                        "maxWidth": null,
+                        "text": "Name",
+                        "width": 300
+                    },
+                    "name": "MyTemplateColumn",
+                    "designerId": "a863b96d-778c-49ea-b645-09b346fd3298",
+                    "cn": [
+                        {
+                            "type": "Ext.XTemplate",
+                            "reference": {
+                                "name": "tpl",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|displayName": "tpl",
+                                "implHandler": [
+                                    "{Vorname} {Name} <br> {Geburtsdatum:date('d.m.Y')}"
+                                ]
+                            },
+                            "name": "tpl",
+                            "designerId": "bc30ffa3-9008-405b-8732-af4a11aaceff"
+                        }
+                    ]
+                },
+                {
+                    "type": "viewcontrollereventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onGridpanelItemDblClick",
+                        "implHandler": [
+                            "Ext.create('hurricane.view.EditPatient', {",
+                            "    record:record",
+                            "}).show();"
+                        ],
+                        "name": "itemdblclick",
+                        "scope": "me"
+                    },
+                    "name": "onGridpanelItemDblClick",
+                    "designerId": "f724b2ff-3b12-42f7-acc6-46efcb5e6005"
+                }
+            ]
+        }
+    ]
+}

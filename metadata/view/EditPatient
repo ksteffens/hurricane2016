@@ -14,7 +14,7 @@
         "id": "editPanel",
         "modal": true,
         "reference": null,
-        "title": "My Panel",
+        "title": "Patienten Anzeigen",
         "width": 400
     },
     "designerId": "d2f5dbab-ce85-4cd2-9de6-0831ab8af78e",
@@ -33,7 +33,7 @@
                 "id": "frmEditPatient",
                 "itemId": "myform",
                 "reference": "form",
-                "title": "My Form"
+                "title": "Patienten Anzeigen"
             },
             "name": "MyForm",
             "designerId": "babfaa55-6079-4317-b7f7-eed529f375ef",
@@ -71,7 +71,8 @@
                     "userConfig": {
                         "designer|displayName": "Name",
                         "fieldLabel": "Name",
-                        "name": "Name"
+                        "name": "Name",
+                        "readOnly": false
                     },
                     "name": "MyTextField",
                     "designerId": "695f4765-f7fc-41ea-8ad2-00c66f6ba30a"
@@ -85,7 +86,8 @@
                     "codeClass": null,
                     "userConfig": {
                         "fieldLabel": "Vorname",
-                        "name": "Vorname"
+                        "name": "Vorname",
+                        "readOnly": false
                     },
                     "name": "MyTextField1",
                     "designerId": "8ee235e1-97cd-4c1b-90f9-cd5562c7b4e2"
@@ -101,6 +103,7 @@
                         "fieldLabel": "Geburtsdatum",
                         "format": "d.m.Y",
                         "name": "Geburtsdatum",
+                        "readOnly": false,
                         "submitFormat": "Y-m-d"
                     },
                     "name": "MyDateField",
@@ -115,7 +118,8 @@
                     "codeClass": null,
                     "userConfig": {
                         "fieldLabel": "Strasse",
-                        "name": "Strasse"
+                        "name": "Strasse",
+                        "readOnly": false
                     },
                     "name": "MyTextField2",
                     "designerId": "4dbe4280-9f90-43a9-b56e-c5c10ea71ecc"
@@ -129,7 +133,8 @@
                     "codeClass": null,
                     "userConfig": {
                         "fieldLabel": "Plz",
-                        "name": "PLZ"
+                        "name": "PLZ",
+                        "readOnly": false
                     },
                     "name": "MyTextField3",
                     "designerId": "70626b50-26d6-4e4c-be11-01187755315b"
@@ -143,7 +148,8 @@
                     "codeClass": null,
                     "userConfig": {
                         "fieldLabel": "Ort",
-                        "name": "Ort"
+                        "name": "Ort",
+                        "readOnly": false
                     },
                     "name": "MyTextField4",
                     "designerId": "fa689d5d-49f8-4606-95fd-7c03935c7549"
@@ -162,6 +168,7 @@
                         "id": "frmFldGeschlecht",
                         "name": "GeschlechtID",
                         "queryMode": "local",
+                        "readOnly": false,
                         "store": "Geschlecht",
                         "value": null,
                         "valueField": "GeschlechtID"
@@ -198,7 +205,7 @@
                                 "itemId": "saveButton",
                                 "layout|flex": 1,
                                 "margin": 5,
-                                "text": "Save"
+                                "text": "Speichern"
                             },
                             "name": "MyButton",
                             "designerId": "bac6917d-7aa9-4841-acd9-0cfe31f1c42a",
@@ -256,7 +263,7 @@
                                 "itemId": "cancelButton",
                                 "layout|flex": 1,
                                 "margin": 5,
-                                "text": "Cancel"
+                                "text": "Abbrechen"
                             },
                             "name": "MyButton1",
                             "designerId": "06b5e582-71a0-4fc6-ad35-1932d8f64f17",

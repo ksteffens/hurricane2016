@@ -12,8 +12,10 @@
    "toolkit": "classic",
    "theme": "theme-crisp-2bf31ae8-211e-4f10-9ca1-4ca4e1b2104c",
    "requires": [
-      "font-awesome"
+      "font-awesome",
+      "ext-locale"
    ],
+   "locale": "de",
    "fashion": {
       "inliner": {
          "enable": false
