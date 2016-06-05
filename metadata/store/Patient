@@ -1,0 +1,64 @@
+{
+    "type": "directstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "designer|userClassName": "Patient",
+        "model": "Patient",
+        "storeId": "Patient"
+    },
+    "name": "MyDirectStore",
+    "designerId": "a57331f6-57a3-477c-9a6a-aa675d219c98",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Direct",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "api": [
+                    "{",
+                    "create  : 'QueryDatabase.createPatient',",
+                    "read    : 'QueryDatabase.readPatient',",
+                    "update  : 'QueryDatabase.updatePatient',",
+                    "destroy : 'QueryDatabase.deletePatient'",
+                    "}"
+                ],
+                "directFn": null
+            },
+            "name": "MyDirectProxy",
+            "designerId": "9a7dafe4-efd6-4f3e-8b64-9e1323ff7b21",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyJsonReader",
+                    "designerId": "63593005-d872-4cb7-bf9d-802b1adb1727"
+                },
+                {
+                    "type": "Ext.data.writer.Json",
+                    "reference": {
+                        "name": "writer",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "writeAllFields": true
+                    },
+                    "name": "MyJsonWriter",
+                    "designerId": "6117d224-d159-4e13-bfbe-8dacfd228ce6"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,41 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Abgang"
+    },
+    "name": "MyModel",
+    "designerId": "2fd71abb-d087-489a-985a-6e635ba903cd",
+    "cn": [
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "AbgangID"
+            },
+            "name": "MyField",
+            "designerId": "9092eae2-a7fa-4d54-a33f-c2904f658201"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Beschreibung"
+            },
+            "name": "MyField1",
+            "designerId": "8a01b480-1aba-4381-935d-b4e26f707e8f"
+        }
+    ]
+}

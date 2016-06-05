@@ -1,0 +1,13 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "patientenlistview",
+        "designer|userClassName": "PatientenListViewViewController"
+    },
+    "designerId": "1e10902b-08f6-4c55-81e3-c04dc5280045"
+}

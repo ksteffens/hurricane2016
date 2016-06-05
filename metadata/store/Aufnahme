@@ -1,0 +1,43 @@
+{
+    "type": "directstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "designer|userClassName": "Aufnahme",
+        "model": "Aufnahme",
+        "storeId": "Aufnahme"
+    },
+    "name": "Abgang1",
+    "designerId": "ad733301-2c8a-4f34-9c88-4b4b7c8880bb",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Direct",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "directFn": "AufnahmeQuery.getAufnahme"
+            },
+            "name": "MyDirectProxy3",
+            "designerId": "a665b371-f8e7-4401-9be6-3166f52c853d",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyJsonReader3",
+                    "designerId": "bd1914f7-e613-41f6-a569-1c3a6bd6bd55"
+                }
+            ]
+        }
+    ]
+}

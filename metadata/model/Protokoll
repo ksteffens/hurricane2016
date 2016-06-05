@@ -1,0 +1,207 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "protokoll",
+        "designer|userClassName": "Protokoll"
+    },
+    "name": "MyModel",
+    "designerId": "754302d2-73d6-4e87-b89f-e35a80e33947",
+    "cn": [
+        {
+            "type": "Ext.data.field.Integer",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ProtokollID"
+            },
+            "name": "MyInteger4",
+            "designerId": "31edd290-d2a9-42a5-af23-aff12f5081b8"
+        },
+        {
+            "type": "Ext.data.field.Date",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dateFormat": "d.m.Y",
+                "dateWriteFormat": "Y-m-d",
+                "name": "EingangsDatum"
+            },
+            "name": "MyDate",
+            "designerId": "ddcc4507-7689-468c-8836-6a40ecfa0405"
+        },
+        {
+            "type": "Ext.data.field.Integer",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "allowNull": true,
+                "name": "PatientenNummer"
+            },
+            "name": "MyInteger5",
+            "designerId": "5c5e7644-0d2e-4b8c-901c-2de6ab098539"
+        },
+        {
+            "type": "Ext.data.field.Date",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dateFormat": "H:i",
+                "dateWriteFormat": "H:i",
+                "name": "AufnahmeZeit"
+            },
+            "name": "MyDate2",
+            "designerId": "e1e63570-3140-4d24-8f59-c48b622f73bc"
+        },
+        {
+            "type": "Ext.data.field.Integer",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "AufnahmeID"
+            },
+            "name": "MyInteger6",
+            "designerId": "84d87d42-1ee2-44a2-be10-6b686fd16715"
+        },
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "AufnahmeKTW"
+            },
+            "name": "MyString10",
+            "designerId": "a4b9b3e1-0a49-483b-8ce7-13ebb637a9b0"
+        },
+        {
+            "type": "Ext.data.field.Date",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dateFormat": "H:i",
+                "dateWriteFormat": "H:i",
+                "name": "AbgangZeit"
+            },
+            "name": "MyDate3",
+            "designerId": "fb20f08a-8f4d-40d1-b222-acb4e72e6a17"
+        },
+        {
+            "type": "Ext.data.field.Integer",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "AbgangID"
+            },
+            "name": "MyInteger7",
+            "designerId": "bd969a6b-dd92-4db8-9225-c409e7816c25"
+        },
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "AbgangUebergabe"
+            },
+            "name": "MyString11",
+            "designerId": "72a506a0-b28e-4330-996b-df21c29fb866"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "AbgangZiel"
+            },
+            "name": "MyField11",
+            "designerId": "cf48ed49-281b-42bb-bde8-52b109f8bd74"
+        },
+        {
+            "type": "Ext.data.field.Integer",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "DiagnoseID"
+            },
+            "name": "MyInteger8",
+            "designerId": "14dede02-c9d6-4027-9527-ea4aafc9389d"
+        },
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "DiagnoseSonstiges"
+            },
+            "name": "MyString12",
+            "designerId": "78e115ed-ced6-4f36-b6d4-ab143ad1af4e"
+        },
+        {
+            "type": "Ext.data.field.Integer",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "allowNull": true,
+                "name": "HelferNr1"
+            },
+            "name": "MyInteger9",
+            "designerId": "26d2bd56-dfa1-4f34-879e-f13d73776b46"
+        },
+        {
+            "type": "Ext.data.field.Integer",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "allowNull": true,
+                "name": "HelferNr2"
+            },
+            "name": "MyInteger10",
+            "designerId": "2d5848e6-a1db-46b1-95b5-c90565c3bbd0"
+        }
+    ]
+}

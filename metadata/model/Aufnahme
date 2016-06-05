@@ -1,0 +1,41 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Aufnahme"
+    },
+    "name": "MyModel",
+    "designerId": "887974f3-da9f-413b-b95b-4975a1baf1e2",
+    "cn": [
+        {
+            "type": "Ext.data.field.Integer",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "AufnahmeID"
+            },
+            "name": "MyInteger3",
+            "designerId": "81ed5e86-e04e-4a6a-b632-85316a9123a9"
+        },
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Beschreibung"
+            },
+            "name": "MyString6",
+            "designerId": "741ee276-5688-41fd-92c5-3512b8992e25"
+        }
+    ]
+}

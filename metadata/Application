@@ -1,0 +1,54 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "models": [
+            "Patient",
+            "Geschlecht",
+            "Diagnose",
+            "Aufnahme",
+            "Abgang",
+            "Protokoll"
+        ],
+        "name": "hurricane",
+        "stores": [
+            "Patient",
+            "Geschlecht",
+            "Diagnose",
+            "Abgang",
+            "Aufnahme",
+            "Protokoll"
+        ],
+        "views": [
+            "Home",
+            "PatientenListView",
+            "EditPatient",
+            "Protokoll",
+            "Protokolls"
+        ]
+    },
+    "name": "Application",
+    "designerId": "application",
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "launch",
+                "implHandler": [
+                    "Ext.direct.Manager.addProvider(Ext.hurricaneApi);"
+                ]
+            },
+            "name": "launch",
+            "designerId": "c52b598c-82bf-461c-81a7-22210b471a08"
+        }
+    ]
+}

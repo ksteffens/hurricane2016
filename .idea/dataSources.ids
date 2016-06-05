@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - hurricane2016@localhost" uuid="709e12f3-a6f1-4860-a206-e86926acd37f">
+    <database-info product="MySQL" version="5.5.42" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="mixed" quoted-identifiers="upper"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.5">
+      <schema id="1" name="hurricane2016"/>
+      <table id="2" parent="1" name="Diagnoseschluessel"/>
+      <table id="3" parent="1" name="Geschlecht"/>
+      <table id="4" parent="1" name="Patient"/>
+      <column id="5" parent="2" name="DiagnoseID">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="6" parent="2" name="Stichwort">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="7" parent="2" name="Diagnose">
+        <mandatory>1</mandatory>
+        <data-type>varchar(30)</data-type>
+      </column>
+      <key id="8" parent="2" name="PRIMARY">
+        <columns>DiagnoseID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="9" parent="3" name="GeschlechtID">
+        <mandatory>1</mandatory>
+        <data-type>int(1)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="10" parent="3" name="Beschreibung">
+        <mandatory>1</mandatory>
+        <data-type>varchar(15)</data-type>
+      </column>
+      <key id="11" parent="3" name="PRIMARY">
+        <columns>GeschlechtID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="12" parent="4" name="patientID">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="13" parent="4" name="Name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(150)</data-type>
+      </column>
+      <column id="14" parent="4" name="Vorname">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="15" parent="4" name="Geburtsdatum">
+        <mandatory>1</mandatory>
+        <data-type>date</data-type>
+      </column>
+      <column id="16" parent="4" name="Strasse">
+        <mandatory>1</mandatory>
+        <data-type>varchar(150)</data-type>
+      </column>
+      <column id="17" parent="4" name="PLZ">
+        <mandatory>1</mandatory>
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="18" parent="4" name="Ort">
+        <mandatory>1</mandatory>
+        <data-type>varchar(150)</data-type>
+      </column>
+      <column id="19" parent="4" name="GeschlechtID">
+        <mandatory>1</mandatory>
+        <data-type>int(1)</data-type>
+      </column>
+      <column id="20" parent="4" name="created">
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <column id="21" parent="4" name="updated">
+        <data-type>timestamp</data-type>
+      </column>
+      <column id="22" parent="4" name="deleted">
+        <data-type>timestamp</data-type>
+      </column>
+      <index id="23" parent="4" name="patientenID">
+        <columns>patientID</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="24" parent="4" name="patientenID">
+        <columns>patientID</columns>
+        <underlying-index>patientenID</underlying-index>
+      </key>
+      <trigger id="25" parent="4" name="patient_update_timestamp">
+        <trig-events>U</trig-events>
+        <trig-turn>BEFORE_ROW</trig-turn>
+      </trigger>
+    </database-model>
+  </data-source>
+</component>
