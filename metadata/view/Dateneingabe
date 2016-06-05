@@ -14,9 +14,9 @@
         "frameHeader": false,
         "header": false,
         "height": null,
-        "layout": "vbox",
+        "layout": "hbox",
         "title": "My Panel",
-        "width": 300
+        "width": null
     },
     "name": "MyPanel6",
     "designerId": "e45445e9-748a-4cf9-892f-e7ccb80d736f",
@@ -24,109 +24,176 @@
     "viewModelInstanceId": "7c47aa01-93b3-4dc4-abf3-595b5a92bdd8",
     "cn": [
         {
-            "type": "Ext.grid.Panel",
+            "type": "linkedinstance",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "bodyPadding": null,
+                "dock": "left",
+                "layout": "auto",
+                "layout|flex": 1,
+                "padding": null,
+                "title": "PatientenListe"
+            },
+            "name": "patietenliste",
+            "designerId": "53828d9e-913e-4a6e-afc1-49dc0ab07f2c",
+            "masterInstanceId": "b190d97f-e2a0-4596-8f14-cbec3d22f4ac"
+        },
+        {
+            "type": "Ext.container.Container",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "dock": null,
-                "layout|flex": 1,
-                "store": "Patient",
-                "title": "Patienten Liste",
-                "width": 300
+                "container|align": "center",
+                "container|pack": "center",
+                "layout": "vbox",
+                "layout|flex": 1
             },
-            "name": "MyGridPanel3",
-            "designerId": "ff1073c7-a87f-4c77-8985-d396deec7a3c",
+            "name": "MyContainer5",
+            "designerId": "a6c2474c-b884-487a-82b9-a6d0178f81ea",
             "cn": [
                 {
-                    "type": "Ext.view.Table",
+                    "type": "Ext.container.Container",
                     "reference": {
-                        "name": "viewConfig",
-                        "type": "object"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "border": 1,
-                        "dock": "left",
-                        "width": 300
-                    },
-                    "name": "MyTable1",
-                    "designerId": "0b24bfee-e16e-4839-9d21-796f120ec762"
-                },
-                {
-                    "type": "Ext.grid.column.Number",
-                    "reference": {
-                        "name": "columns",
+                        "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "dataIndex": "patientID",
-                        "hidden": true,
-                        "text": "Patient Id"
+                        "container|align": "stretch",
+                        "layout": "hbox",
+                        "layout|flex": 1
                     },
-                    "name": "MyNumberColumn9",
-                    "designerId": "2744f9db-1c69-41f3-9349-a7af3a154f75"
-                },
-                {
-                    "type": "Ext.grid.column.Template",
-                    "reference": {
-                        "name": "columns",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "border": null,
-                        "dataIndex": "Name",
-                        "defaultWidth": null,
-                        "maxWidth": null,
-                        "text": "Name",
-                        "width": 300
-                    },
-                    "name": "MyTemplateColumn",
-                    "designerId": "a863b96d-778c-49ea-b645-09b346fd3298",
+                    "name": "MyContainer6",
+                    "designerId": "05a39c42-3117-4947-a95b-40ac8f310b9c",
                     "cn": [
                         {
-                            "type": "Ext.XTemplate",
+                            "type": "linkedinstance",
                             "reference": {
-                                "name": "tpl",
-                                "type": "object"
+                                "name": "items",
+                                "type": "array"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|displayName": "tpl",
-                                "implHandler": [
-                                    "{Vorname} {Name} <br> {Geburtsdatum:date('d.m.Y')}"
-                                ]
+                                "layout|flex": 1,
+                                "maxWidth": 300
                             },
-                            "name": "tpl",
-                            "designerId": "bc30ffa3-9008-405b-8732-af4a11aaceff"
+                            "name": "addpatient",
+                            "designerId": "8ceac10b-3088-4ab9-9dc8-ba2a21af74ba",
+                            "masterInstanceId": "028373ac-970a-4b18-9865-89da8cae3fbd"
+                        },
+                        {
+                            "type": "linkedinstance",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout": "vbox",
+                                "layout|flex": 1
+                            },
+                            "name": "protokoll",
+                            "designerId": "2227d1fb-3b81-488f-ab68-22fa004da4e4",
+                            "masterInstanceId": "06976143-d0a6-4c18-bef5-e4c46763a648"
                         }
                     ]
                 },
                 {
-                    "type": "viewcontrollereventbinding",
+                    "type": "Ext.container.Container",
                     "reference": {
-                        "name": "listeners",
+                        "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "fn": "onGridpanelItemDblClick",
-                        "implHandler": [
-                            "Ext.create('hurricane.view.EditPatient', {",
-                            "    record:record",
-                            "}).show();"
-                        ],
-                        "name": "itemdblclick",
-                        "scope": "me"
+                        "container|pack": "center",
+                        "layout": "hbox",
+                        "layout|flex": 1
                     },
-                    "name": "onGridpanelItemDblClick",
-                    "designerId": "f724b2ff-3b12-42f7-acc6-46efcb5e6005"
+                    "name": "MyContainer8",
+                    "designerId": "ded1b5b2-0aad-4eb5-9895-1b6fd96303b2",
+                    "cn": [
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "margin": "20 10 10 10 ",
+                                "text": "Speichern"
+                            },
+                            "name": "MyButton12",
+                            "designerId": "174f6478-9565-4c91-a54b-504e12afca92",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onButtonClick",
+                                        "implHandler": [
+                                            "var form         = Ext.getCmp('frmAddPatient').getForm(),",
+                                            "    store        = Ext.getStore('Patient');",
+                                            "",
+                                            "form.updateRecord();",
+                                            "",
+                                            "store.add(form.getRecord());"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "name": "onButtonClick",
+                                    "designerId": "fc0b224a-1eb8-40d0-ac7f-d972ed52af88"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "margin": "20 10 10 10",
+                                "text": "Abbrechen"
+                            },
+                            "name": "MyButton13",
+                            "designerId": "dae5b146-12b6-489e-af90-6db07645c015"
+                        }
+                    ]
                 }
             ]
+        },
+        {
+            "type": "viewcontrollereventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onPanelAfterRender",
+                "implHandler": [
+                    "var form = Ext.getCmp('frmAddPatient').getForm().findField('Name').focus();"
+                ],
+                "name": "afterrender",
+                "scope": "me"
+            },
+            "name": "onPanelAfterRender",
+            "designerId": "dd6b33cb-0382-458a-9ff1-0bb76c25c958"
         }
     ]
 }

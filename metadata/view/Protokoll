@@ -1,5 +1,5 @@
 {
-    "type": "Ext.window.Window",
+    "type": "Ext.panel.Panel",
     "reference": {
         "name": "items",
         "type": "array"
@@ -12,11 +12,13 @@
         "header": false,
         "height": null,
         "layout": null,
+        "manageHeight": false,
+        "padding": null,
         "shrinkWrap": [
             "0"
         ],
         "title": null,
-        "width": null
+        "width": 250
     },
     "designerId": "06976143-d0a6-4c18-bef5-e4c46763a648",
     "viewControllerInstanceId": "48487c0a-5d6c-47e3-b20d-f1c38011c215",
@@ -30,13 +32,15 @@
             },
             "codeClass": null,
             "userConfig": {
-                "bodyPadding": 10,
+                "bodyPadding": "10 10 10 25",
                 "id": "frmInputProtokoll",
                 "itemId": "myform3",
+                "manageHeight": false,
                 "padding": null,
                 "reference": "form",
-                "title": "Protokoll Eingabe",
-                "titleAlign": "center"
+                "title": "Protokolldaten",
+                "titleAlign": "center",
+                "width": 250
             },
             "name": "MyForm3",
             "designerId": "46ed7cc6-f38f-4389-99b8-2d132c44e165",
@@ -432,6 +436,7 @@
                         "container|align": "middle",
                         "container|pack": "center",
                         "designer|displayName": "buttons",
+                        "hidden": true,
                         "layout": "hbox",
                         "padding": 10
                     },

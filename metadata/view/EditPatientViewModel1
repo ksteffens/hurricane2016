@@ -1,0 +1,45 @@
+{
+    "type": "Ext.app.ViewModel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "addpatient",
+        "designer|userClassName": "EditPatientViewModel1"
+    },
+    "name": "EditPatientViewModel1",
+    "designerId": "307e99c2-dd89-48ad-b4c2-174188fbc20f",
+    "cn": [
+        {
+            "type": "Ext.data.Store",
+            "reference": {
+                "name": "stores",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "data": [
+                    "[{\"patientID\":424,\"Name\":\"adipisci\",\"Vorname\":\"pariatur\",\"Geburtsdatum\":\"8/21/2005\",\"Strasse\":\"quos\",\"PLZ\":\"doloremque\",\"Ort\":\"voluptatem\",\"Geschlecht\":\"id\"},{\"patientID\":106,\"Name\":\"consequatur\",\"Vorname\":\"dolorem\",\"Geburtsdatum\":\"4/27/2004\",\"Strasse\":\"minima\",\"PLZ\":\"itaque\",\"Ort\":\"officiis\",\"Geschlecht\":\"non\"},{\"patientID\":215,\"Name\":\"architecto\",\"Vorname\":\"vel\",\"Geburtsdatum\":\"2/5/2009\",\"Strasse\":\"fugiat\",\"PLZ\":\"natus\",\"Ort\":\"eligendi\",\"Geschlecht\":\"deserunt\"},{\"patientID\":980,\"Name\":\"non\",\"Vorname\":\"enim\",\"Geburtsdatum\":\"6/22/2005\",\"Strasse\":\"amet\",\"PLZ\":\"accusantium\",\"Ort\":\"qui\",\"Geschlecht\":\"inventore\"},{\"patientID\":52,\"Name\":\"voluptates\",\"Vorname\":\"est\",\"Geburtsdatum\":\"8/25/2007\",\"Strasse\":\"fugit\",\"PLZ\":\"blanditiis\",\"Ort\":\"debitis\",\"Geschlecht\":\"itaque\"},{\"patientID\":84,\"Name\":\"assumenda\",\"Vorname\":\"quas\",\"Geburtsdatum\":\"4/9/2006\",\"Strasse\":\"quod\",\"PLZ\":\"animi\",\"Ort\":\"non\",\"Geschlecht\":\"illum\"},{\"patientID\":384,\"Name\":\"voluptas\",\"Vorname\":\"nemo\",\"Geburtsdatum\":\"8/2/2007\",\"Strasse\":\"maxime\",\"PLZ\":\"id\",\"Ort\":\"inventore\",\"Geschlecht\":\"non\"},{\"patientID\":856,\"Name\":\"sapiente\",\"Vorname\":\"omnis\",\"Geburtsdatum\":\"2/12/2008\",\"Strasse\":\"voluptas\",\"PLZ\":\"eum\",\"Ort\":\"laudantium\",\"Geschlecht\":\"voluptatem\"},{\"patientID\":43,\"Name\":\"praesentium\",\"Vorname\":\"quia\",\"Geburtsdatum\":\"6/1/2010\",\"Strasse\":\"vel\",\"PLZ\":\"explicabo\",\"Ort\":\"sunt\",\"Geschlecht\":\"quia\"},{\"patientID\":624,\"Name\":\"totam\",\"Vorname\":\"praesentium\",\"Geburtsdatum\":\"10/2/2006\",\"Strasse\":\"recusandae\",\"PLZ\":\"eos\",\"Ort\":\"debitis\",\"Geschlecht\":\"beatae\"},{\"patientID\":819,\"Name\":\"vel\",\"Vorname\":\"corrupti\",\"Geburtsdatum\":\"12/28/2006\",\"Strasse\":\"tempora\",\"PLZ\":\"adipisci\",\"Ort\":\"et\",\"Geschlecht\":\"commodi\"},{\"patientID\":400,\"Name\":\"atque\",\"Vorname\":\"at\",\"Geburtsdatum\":\"9/28/2009\",\"Strasse\":\"corrupti\",\"PLZ\":\"consequatur\",\"Ort\":\"dolorum\",\"Geschlecht\":\"aut\"},{\"patientID\":378,\"Name\":\"quae\",\"Vorname\":\"ipsum\",\"Geburtsdatum\":\"2/15/2007\",\"Strasse\":\"modi\",\"PLZ\":\"sunt\",\"Ort\":\"in\",\"Geschlecht\":\"tempora\"},{\"patientID\":347,\"Name\":\"quia\",\"Vorname\":\"quod\",\"Geburtsdatum\":\"8/16/2009\",\"Strasse\":\"et\",\"PLZ\":\"nesciunt\",\"Ort\":\"molestiae\",\"Geschlecht\":\"doloribus\"},{\"patientID\":897,\"Name\":\"repellendus\",\"Vorname\":\"itaque\",\"Geburtsdatum\":\"3/5/2006\",\"Strasse\":\"voluptate\",\"PLZ\":\"id\",\"Ort\":\"ab\",\"Geschlecht\":\"optio\"},{\"patientID\":381,\"Name\":\"aut\",\"Vorname\":\"sit\",\"Geburtsdatum\":\"9/10/2003\",\"Strasse\":\"aliquam\",\"PLZ\":\"pariatur\",\"Ort\":\"aspernatur\",\"Geschlecht\":\"est\"},{\"patientID\":784,\"Name\":\"ratione\",\"Vorname\":\"quasi\",\"Geburtsdatum\":\"1/11/2008\",\"Strasse\":\"autem\",\"PLZ\":\"eos\",\"Ort\":\"voluptatem\",\"Geschlecht\":\"veritatis\"},{\"patientID\":736,\"Name\":\"voluptatibus\",\"Vorname\":\"autem\",\"Geburtsdatum\":\"10/19/2001\",\"Strasse\":\"culpa\",\"PLZ\":\"quod\",\"Ort\":\"vel\",\"Geschlecht\":\"dolor\"},{\"patientID\":93,\"Name\":\"minima\",\"Vorname\":\"eos\",\"Geburtsdatum\":\"3/10/2010\",\"Strasse\":\"quia\",\"PLZ\":\"numquam\",\"Ort\":\"corporis\",\"Geschlecht\":\"debitis\"},{\"patientID\":90,\"Name\":\"qui\",\"Vorname\":\"consequuntur\",\"Geburtsdatum\":\"4/4/2010\",\"Strasse\":\"praesentium\",\"PLZ\":\"eum\",\"Ort\":\"provident\",\"Geschlecht\":\"autem\"},{\"patientID\":215,\"Name\":\"aut\",\"Vorname\":\"quaerat\",\"Geburtsdatum\":\"12/16/2005\",\"Strasse\":\"non\",\"PLZ\":\"ipsa\",\"Ort\":\"quia\",\"Geschlecht\":\"quisquam\"},{\"patientID\":441,\"Name\":\"explicabo\",\"Vorname\":\"doloremque\",\"Geburtsdatum\":\"12/16/2010\",\"Strasse\":\"et\",\"PLZ\":\"provident\",\"Ort\":\"qui\",\"Geschlecht\":\"perferendis\"},{\"patientID\":422,\"Name\":\"illo\",\"Vorname\":\"illum\",\"Geburtsdatum\":\"11/5/2007\",\"Strasse\":\"libero\",\"PLZ\":\"sint\",\"Ort\":\"tenetur\",\"Geschlecht\":\"eum\"},{\"patientID\":915,\"Name\":\"iste\",\"Vorname\":\"consequatur\",\"Geburtsdatum\":\"1/24/2014\",\"Strasse\":\"consequuntur\",\"PLZ\":\"qui\",\"Ort\":\"quas\",\"Geschlecht\":\"sequi\"},{\"patientID\":222,\"Name\":\"cupiditate\",\"Vorname\":\"harum\",\"Geburtsdatum\":\"10/10/2001\",\"Strasse\":\"aspernatur\",\"PLZ\":\"necessitatibus\",\"Ort\":\"voluptatem\",\"Geschlecht\":\"nihil\"},{\"patientID\":172,\"Name\":\"porro\",\"Vorname\":\"sint\",\"Geburtsdatum\":\"1/19/2011\",\"Strasse\":\"id\",\"PLZ\":\"illo\",\"Ort\":\"cum\",\"Geschlecht\":\"et\"},{\"patientID\":167,\"Name\":\"velit\",\"Vorname\":\"soluta\",\"Geburtsdatum\":\"9/14/2001\",\"Strasse\":\"est\",\"PLZ\":\"ut\",\"Ort\":\"laborum\",\"Geschlecht\":\"aliquid\"},{\"patientID\":181,\"Name\":\"qui\",\"Vorname\":\"animi\",\"Geburtsdatum\":\"11/23/2007\",\"Strasse\":\"quo\",\"PLZ\":\"fugit\",\"Ort\":\"eos\",\"Geschlecht\":\"non\"},{\"patientID\":202,\"Name\":\"debitis\",\"Vorname\":\"dolorum\",\"Geburtsdatum\":\"3/20/2013\",\"Strasse\":\"et\",\"PLZ\":\"quo\",\"Ort\":\"earum\",\"Geschlecht\":\"consequatur\"},{\"patientID\":567,\"Name\":\"consequatur\",\"Vorname\":\"tempore\",\"Geburtsdatum\":\"11/15/2008\",\"Strasse\":\"suscipit\",\"PLZ\":\"et\",\"Ort\":\"quidem\",\"Geschlecht\":\"quidem\"}]"
+                ],
+                "model": "Patient",
+                "name": "patients"
+            },
+            "name": "patients",
+            "designerId": "19dbff62-f666-4035-b57c-e6687d5e4939",
+            "cn": [
+                {
+                    "type": "Ext.data.proxy.Memory",
+                    "reference": {
+                        "name": "proxy",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyMemoryProxy",
+                    "designerId": "092def09-db67-4a07-9f4b-122bd66a241c"
+                }
+            ]
+        }
+    ]
+}

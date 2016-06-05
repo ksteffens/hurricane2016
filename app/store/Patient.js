@@ -29,6 +29,7 @@ Ext.define('hurricane.store.Patient', {
         me.callParent([Ext.apply({
             storeId: 'Patient',
             autoLoad: true,
+            autoSync: true,
             model: 'hurricane.model.Patient',
             proxy: {
                 type: 'direct',

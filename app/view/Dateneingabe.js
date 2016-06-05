@@ -20,11 +20,11 @@ Ext.define('hurricane.view.Dateneingabe', {
     requires: [
         'hurricane.view.DateneingabeViewModel',
         'hurricane.view.DateneingabeViewController',
-        'Ext.grid.Panel',
-        'Ext.view.Table',
-        'Ext.grid.column.Number',
-        'Ext.grid.column.Template',
-        'Ext.XTemplate'
+        'hurricane.view.PatietenListe',
+        'hurricane.view.addPatient',
+        'hurricane.view.Protokoll',
+        'Ext.panel.Panel',
+        'Ext.button.Button'
     ],
 
     controller: 'dateneingabe',
@@ -32,49 +32,82 @@ Ext.define('hurricane.view.Dateneingabe', {
         type: 'dateneingabe'
     },
     dock: 'left',
-    width: 300,
     bodyBorder: true,
     frameHeader: false,
     header: false,
     title: 'My Panel',
 
     layout: {
-        type: 'vbox',
+        type: 'hbox',
         align: 'stretch'
     },
+    dockedItems: [
+        {
+            xtype: 'patietenliste',
+            dock: 'left',
+            layout: 'auto',
+            title: 'PatientenListe',
+            flex: 1
+        }
+    ],
     items: [
         {
-            xtype: 'gridpanel',
+            xtype: 'container',
             flex: 1,
-            width: 300,
-            title: 'Patienten Liste',
-            store: 'Patient',
-            viewConfig: {
-                border: 1,
-                dock: 'left',
-                width: 300
+            layout: {
+                type: 'vbox',
+                align: 'center',
+                pack: 'center'
             },
-            columns: [
+            items: [
                 {
-                    xtype: 'numbercolumn',
-                    hidden: true,
-                    dataIndex: 'patientID',
-                    text: 'Patient Id'
+                    xtype: 'container',
+                    flex: 1,
+                    layout: {
+                        type: 'hbox',
+                        align: 'stretch'
+                    },
+                    items: [
+                        {
+                            xtype: 'addpatient',
+                            maxWidth: 300,
+                            flex: 1
+                        },
+                        {
+                            xtype: 'protokoll',
+                            layout: 'vbox',
+                            flex: 1
+                        }
+                    ]
                 },
                 {
-                    xtype: 'templatecolumn',
-                    tpl: [
-                        '{Vorname} {Name} <br> {Geburtsdatum:date(\'d.m.Y\')}'
-                    ],
-                    width: 300,
-                    dataIndex: 'Name',
-                    text: 'Name'
+                    xtype: 'container',
+                    flex: 1,
+                    layout: {
+                        type: 'hbox',
+                        pack: 'center'
+                    },
+                    items: [
+                        {
+                            xtype: 'button',
+                            margin: '20 10 10 10 ',
+                            text: 'Speichern',
+                            listeners: {
+                                click: 'onButtonClick'
+                            }
+                        },
+                        {
+                            xtype: 'button',
+                            margin: '20 10 10 10',
+                            text: 'Abbrechen'
+                        }
+                    ]
                 }
-            ],
-            listeners: {
-                itemdblclick: 'onGridpanelItemDblClick'
-            }
+            ]
         }
-    ]
+    ],
+    listeners: {
+        afterrender: 'onPanelAfterRender'
+    }
 
 });

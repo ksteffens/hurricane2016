@@ -1,0 +1,14 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "addpatient",
+        "designer|userClassName": "EditPatientViewController1"
+    },
+    "name": "EditPatientViewController1",
+    "designerId": "76ef3c18-836e-4a9c-879f-a373b0a278f6"
+}

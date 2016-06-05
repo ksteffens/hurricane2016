@@ -14,7 +14,7 @@
  */
 
 Ext.define('hurricane.view.Protokoll', {
-    extend: 'Ext.window.Window',
+    extend: 'Ext.panel.Panel',
     alias: 'widget.protokoll',
 
     requires: [
@@ -31,8 +31,10 @@ Ext.define('hurricane.view.Protokoll', {
         type: 'protokoll'
     },
     shrinkWrap: 0,
+    width: 250,
     frameHeader: false,
     header: false,
+    manageHeight: false,
     defaultListenerScope: true,
 
     items: [
@@ -41,8 +43,10 @@ Ext.define('hurricane.view.Protokoll', {
             reference: 'form',
             id: 'frmInputProtokoll',
             itemId: 'myform3',
-            bodyPadding: 10,
-            title: 'Protokoll Eingabe',
+            width: 250,
+            bodyPadding: '10 10 10 25',
+            manageHeight: false,
+            title: 'Protokolldaten',
             titleAlign: 'center',
             listeners: {
                 afterrender: 'onFormAfterRender'
@@ -220,6 +224,7 @@ Ext.define('hurricane.view.Protokoll', {
                 },
                 {
                     xtype: 'container',
+                    hidden: true,
                     padding: 10,
                     layout: {
                         type: 'hbox',
