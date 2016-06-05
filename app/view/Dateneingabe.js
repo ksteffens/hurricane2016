@@ -35,6 +35,7 @@ Ext.define('hurricane.view.Dateneingabe', {
     bodyBorder: true,
     frameHeader: false,
     header: false,
+    manageHeight: false,
     title: 'My Panel',
 
     layout: {
@@ -45,7 +46,7 @@ Ext.define('hurricane.view.Dateneingabe', {
         {
             xtype: 'patietenliste',
             dock: 'left',
-            layout: 'auto',
+            layout: 'fit',
             title: 'PatientenListe',
             flex: 1
         }
@@ -54,6 +55,7 @@ Ext.define('hurricane.view.Dateneingabe', {
         {
             xtype: 'container',
             flex: 1,
+            maxHeight: 100000,
             layout: {
                 type: 'vbox',
                 align: 'center',
@@ -62,10 +64,11 @@ Ext.define('hurricane.view.Dateneingabe', {
             items: [
                 {
                     xtype: 'container',
-                    flex: 1,
+                    flex: 0,
+                    height: 438,
                     layout: {
                         type: 'hbox',
-                        align: 'stretch'
+                        pack: 'center'
                     },
                     items: [
                         {
@@ -83,10 +86,8 @@ Ext.define('hurricane.view.Dateneingabe', {
                 {
                     xtype: 'container',
                     flex: 1,
-                    layout: {
-                        type: 'hbox',
-                        pack: 'center'
-                    },
+                    dock: 'bottom',
+                    height: 55,
                     items: [
                         {
                             xtype: 'button',
@@ -99,7 +100,11 @@ Ext.define('hurricane.view.Dateneingabe', {
                         {
                             xtype: 'button',
                             margin: '20 10 10 10',
-                            text: 'Abbrechen'
+                            width: 150,
+                            text: 'Abbrechen',
+                            listeners: {
+                                click: 'onButtonClick1'
+                            }
                         }
                     ]
                 }

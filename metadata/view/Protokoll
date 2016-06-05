@@ -11,7 +11,8 @@
         "frameHeader": false,
         "header": false,
         "height": null,
-        "layout": null,
+        "id": "pnlProtokoll",
+        "layout": "fit",
         "manageHeight": false,
         "padding": null,
         "shrinkWrap": [
@@ -33,8 +34,10 @@
             "codeClass": null,
             "userConfig": {
                 "bodyPadding": "10 10 10 25",
+                "dock": null,
                 "id": "frmInputProtokoll",
                 "itemId": "myform3",
+                "layout": "vbox",
                 "manageHeight": false,
                 "padding": null,
                 "reference": "form",
@@ -82,11 +85,28 @@
                         "fieldLabel": "Protokoll Id",
                         "hidden": true,
                         "hideLabel": true,
+                        "id": "fldProtokollID",
                         "name": "ProtokollID",
                         "width": 200
                     },
                     "name": "MyTextField27",
                     "designerId": "94dc305d-cea2-4887-b8f1-80326f7797f4"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Label",
+                        "hidden": true,
+                        "layout|flex": 1,
+                        "name": "PatientenID"
+                    },
+                    "name": "MyTextField20",
+                    "designerId": "d56e5250-aa18-4cae-9667-0ff2be592a4f"
                 },
                 {
                     "type": "Ext.form.field.Date",
@@ -96,6 +116,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "allowBlank": false,
                         "altFormats": "m/d/Y|n/j/Y|n/j/y|m/j/y|n/d/y|m/j/Y|n/d/Y|m-d-y|m-d-Y|m/d|m-d|md|mdy|mdY|d|Y-m-d|n-j|n/j|dmy|dmY",
                         "emptyText": "Eingangs-Datum",
                         "fieldLabel": "Eingangs Datum",
@@ -116,7 +137,8 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "emptyText": "Patienten Nummer",
+                        "allowBlank": false,
+                        "emptyText": "Protokoll Nummer",
                         "fieldLabel": "Patienten Nummer",
                         "hideLabel": true,
                         "inputType": "number",
@@ -397,6 +419,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "allowBlank": false,
                         "emptyText": "Helfer Nummer 1",
                         "fieldLabel": "Helfer Nr1",
                         "hideLabel": true,

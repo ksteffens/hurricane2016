@@ -8,7 +8,8 @@
     "userConfig": {
         "designer|initialView": true,
         "designer|userAlias": "home",
-        "designer|userClassName": "Home"
+        "designer|userClassName": "Home",
+        "layout": "fit"
     },
     "name": "MyViewport",
     "designerId": "c53eb573-a139-4e24-bf0d-7f551a715571",
@@ -22,6 +23,9 @@
                 "type": "array"
             },
             "codeClass": null,
+            "userConfig": {
+                "layout": "fit"
+            },
             "name": "dateneingabe",
             "designerId": "01b0485b-a7d8-4390-ac35-e096900625d5",
             "masterInstanceId": "e45445e9-748a-4cf9-892f-e7ccb80d736f"

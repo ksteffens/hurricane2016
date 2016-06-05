@@ -1,5 +1,6 @@
 <?php
 require('config.php');
+require_once '../vendor/autoload.php';
 header('Content-Type: text/javascript');
 
 // convert API config to Ext Direct spec

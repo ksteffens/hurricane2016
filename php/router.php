@@ -1,6 +1,5 @@
 <?php
 require('config.php');
-
 class BogusAction {
     public $action;
     public $method;
@@ -100,4 +99,3 @@ if ($isForm && $isUpload){
 else{
     echo json_encode($response);
 }
-//error_log(print_r($response, 1));

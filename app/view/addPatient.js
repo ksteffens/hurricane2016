@@ -69,6 +69,7 @@ Ext.define('hurricane.view.addPatient', {
                     hideLabel: true,
                     name: 'Name',
                     readOnly: false,
+                    allowBlank: false,
                     emptyText: 'Name'
                 },
                 {
@@ -78,6 +79,7 @@ Ext.define('hurricane.view.addPatient', {
                     hideLabel: true,
                     name: 'Vorname',
                     readOnly: false,
+                    allowBlank: false,
                     emptyText: 'Vorname'
                 },
                 {
@@ -126,6 +128,7 @@ Ext.define('hurricane.view.addPatient', {
                     hideLabel: true,
                     name: 'GeschlechtID',
                     readOnly: false,
+                    allowBlank: false,
                     emptyText: 'Geschlecht',
                     displayField: 'Beschreibung',
                     forceSelection: true,
@@ -187,22 +190,12 @@ Ext.define('hurricane.view.addPatient', {
     },
 
     onWindowAfterRender: function(component, eOpts) {
-        //Ext.getCmp('frmEditPatient').loadRecord(component.record);
-        //var combo = Ext.getCmp('frmFldGeschlecht');
-        //combo.setValue(component.record.data.GeschlechtID);
+        var form         = this.getReferences().form.getForm();
+        var newRecord = Ext.create('hurricane.model.Patient');
 
-        //});
-                var form         = this.getReferences().form.getForm();
-                var newRecord = Ext.create('hurricane.model.Patient');
+        form.reset();
 
-                // Clear form
-                form.reset();
-
-                // Set record
-                form.loadRecord(newRecord);
-        //    }
-
-
+        form.loadRecord(newRecord);
     }
 
 });

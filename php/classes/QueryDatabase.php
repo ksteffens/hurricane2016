@@ -66,10 +66,14 @@ class QueryDatabase
     }
 
     public function createPatient($params) {
+        $_db = $this->_db;
         error_log(print_r($params, 1));
-        $sql = "INSERT INTO Patient (patientID, Name, Vorname, Geburtsdatum, Strasse, PLZ, Ort, GeschlechtID, created, updated, deleted) VALUES (NULL, $params->patientID, $params->Name, $params->Vorname, $params->Geburtsdatum, $params->Strasse, $params->PLZ, $params->Ort, $params->GeschlechtID,  NULL, NULL);";
-            
-
+        $sql = "INSERT INTO Patient (Name, Vorname, Geburtsdatum, Strasse, PLZ, Ort, GeschlechtID) 
+                VALUES ('$params->Name', '$params->Vorname', '$params->Geburtsdatum', '$params->Strasse', '$params->PLZ', '$params->Ort', '$params->GeschlechtID');";
+        $_result = $_db->query($sql) or
+        die('Connection Error: ' . $_db->connect_error);
+        $params->patientID = $_db->insert_id;
+        return $params;
     }
 
 }

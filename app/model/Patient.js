@@ -34,6 +34,7 @@ Ext.define('hurricane.model.Patient', {
         },
         {
             type: 'string',
+            allowNull: true,
             name: 'Vorname'
         },
         {
@@ -55,7 +56,7 @@ Ext.define('hurricane.model.Patient', {
         },
         {
             type: 'string',
-            name: 'Geschlecht'
+            name: 'GeschlechtID'
         }
     ]
 });

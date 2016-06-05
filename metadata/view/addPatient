@@ -75,6 +75,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "allowBlank": false,
                         "designer|displayName": "Name",
                         "emptyText": "Name",
                         "fieldLabel": "Name",
@@ -95,6 +96,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "allowBlank": false,
                         "emptyText": "Vorname",
                         "fieldLabel": "Vorname",
                         "hideLabel": true,
@@ -187,6 +189,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "allowBlank": false,
                         "designer|displayName": "Geschlecht",
                         "displayField": "Beschreibung",
                         "emptyText": "Geschlecht",
@@ -348,22 +351,12 @@
             "userConfig": {
                 "fn": "onWindowAfterRender",
                 "implHandler": [
-                    "//Ext.getCmp('frmEditPatient').loadRecord(component.record);",
-                    "//var combo = Ext.getCmp('frmFldGeschlecht');",
-                    "//combo.setValue(component.record.data.GeschlechtID);",
+                    "var form         = this.getReferences().form.getForm();",
+                    "var newRecord = Ext.create('hurricane.model.Patient');",
                     "",
-                    "//});",
-                    "        var form         = this.getReferences().form.getForm();",
-                    "        var newRecord = Ext.create('hurricane.model.Patient');",
+                    "form.reset();",
                     "",
-                    "        // Clear form",
-                    "        form.reset();",
-                    "",
-                    "        // Set record",
-                    "        form.loadRecord(newRecord);",
-                    "//    }",
-                    "",
-                    ""
+                    "form.loadRecord(newRecord);"
                 ],
                 "name": "afterrender",
                 "scope": "me"

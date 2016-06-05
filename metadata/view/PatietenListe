@@ -8,9 +8,12 @@
     "userConfig": {
         "designer|userAlias": "patietenliste",
         "designer|userClassName": "PatietenListe",
+        "dock": "top",
         "frameHeader": false,
         "header": false,
         "height": null,
+        "layout": "hbox",
+        "manageHeight": false,
         "title": "My Panel",
         "width": 250
     },
@@ -28,11 +31,18 @@
             "codeClass": null,
             "userConfig": {
                 "dock": null,
+                "layout|flex": 1,
+                "manageHeight": false,
+                "scrollable": null,
                 "store": "Patient",
+                "syncRowHeight": false,
                 "title": "Patienten Liste",
                 "width": 250
             },
             "name": "MyGridPanel3",
+            "configAlternates": {
+                "scrollable": "boolean"
+            },
             "designerId": "4b8f8d84-3770-45c1-b623-dbcd4549a8a8",
             "cn": [
                 {

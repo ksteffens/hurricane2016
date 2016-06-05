@@ -26,6 +26,19 @@
             "designerId": "31edd290-d2a9-42a5-af23-aff12f5081b8"
         },
         {
+            "type": "Ext.data.field.Integer",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "PatientenID"
+            },
+            "name": "MyInteger11",
+            "designerId": "6a9fd4ed-6151-4ea9-b073-17000f8adec3"
+        },
+        {
             "type": "Ext.data.field.Date",
             "reference": {
                 "name": "fields",
@@ -63,7 +76,7 @@
             "codeClass": null,
             "userConfig": {
                 "dateFormat": "H:i",
-                "dateWriteFormat": "H:i",
+                "dateWriteFormat": "H:i:s",
                 "name": "AufnahmeZeit"
             },
             "name": "MyDate2",
@@ -104,7 +117,7 @@
             "codeClass": null,
             "userConfig": {
                 "dateFormat": "H:i",
-                "dateWriteFormat": "H:i",
+                "dateWriteFormat": "H:i:s",
                 "name": "AbgangZeit"
             },
             "name": "MyDate3",

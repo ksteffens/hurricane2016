@@ -31,16 +31,22 @@ Ext.define('hurricane.view.PatietenListe', {
     viewModel: {
         type: 'patietenliste'
     },
+    dock: 'top',
     width: 250,
+    layout: 'hbox',
     frameHeader: false,
     header: false,
+    manageHeight: false,
     title: 'My Panel',
 
     items: [
         {
             xtype: 'gridpanel',
+            flex: 1,
             width: 250,
+            manageHeight: false,
             title: 'Patienten Liste',
+            syncRowHeight: false,
             store: 'Patient',
             viewConfig: {
                 border: 1,

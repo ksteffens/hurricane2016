@@ -46,6 +46,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "allowNull": true,
                 "name": "Vorname"
             },
             "name": "MyString1",
@@ -114,7 +115,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "Geschlecht"
+                "name": "GeschlechtID"
             },
             "name": "MyString5",
             "designerId": "38b70ca3-390d-434c-bca4-769b3e979edc"

@@ -26,10 +26,12 @@ Ext.define('hurricane.view.Home', {
     viewModel: {
         type: 'home'
     },
+    layout: 'fit',
 
     items: [
         {
-            xtype: 'dateneingabe'
+            xtype: 'dateneingabe',
+            layout: 'fit'
         }
     ]
 

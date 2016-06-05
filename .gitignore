@@ -5,3 +5,5 @@ ext
 build
 build.xml
 .idea
+
+/vendor/

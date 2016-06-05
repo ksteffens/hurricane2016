@@ -47,17 +47,17 @@ class ProtokollQuery
 error_log(print_r($params, 1));
         $_db = $this->_db;
 
-        $_result = $_db->query("SELECT * FROM `Protokoll`") or
+        $sql = "INSERT INTO Protokoll (PatientenID, EingangsDatum, PatientenNummer, AufnahmeZeit, AufnahmeID, AufnahmeKTW, AbgangZeit, AbgangID, AbgangUebergabe, AbgangZiel, DiagnoseID, DiagnoseSonstiges, HelferNr1, HelferNr2) 
+                VALUES ($params->PatientenID, $params->EingangsDatum, $params->EingangsDatum, $params->PatientenNummer, $params->AufnahmeZeit, $params->AufnahmeID, $params->AufnahmeKTW,$params->AbgangZeit, $params->AbgangUebergabe, $params->AbgangZiel, $params->DiagnoseID, $params->DiagnoseSonstiges, $params->HelferNr1, $params->HelferNr2 );";
+
+
+        $_result = $_db->query($sql)or
         die('Connection Error: ' . $_db->connect_error);
         $results = array();
 
-
-        while ($row = $_result->fetch_assoc()) {
-            array_push($results, $row);
-        }
+    error_log($_db->error);
 
         $this->_db->close();
-  //      error_log(print_r($results, 1));
         return $results;
     }
 

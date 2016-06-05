@@ -19,11 +19,42 @@ Ext.define('hurricane.view.DateneingabeViewController', {
 
     onButtonClick: function(button, e, eOpts) {
         var form         = Ext.getCmp('frmAddPatient').getForm(),
-            store        = Ext.getStore('Patient');
+            form2        = Ext.getCmp('frmInputProtokoll').getForm(),
+            newRecord    = Ext.create('hurricane.model.Patient'),
+            store        = Ext.getStore('Patient'),
+            store2		 = Ext.getStore('Protokoll');
+        if (form.isValid() && form2.isValid()){
 
-        form.updateRecord();
+            form.updateRecord();
+            var temp = store.add(form.getRecord());
 
-        store.add(form.getRecord());
+
+
+            setTimeout(function(){
+                form2.findField('PatientenID').setValue(temp[0].data.patientID);
+                form2.updateRecord();
+                var temp2 = store2.add(form2.getRecord());
+
+
+                form.reset();
+                form.loadRecord(newRecord);
+                form2.reset();
+                form2.loadRecord(newRecord);
+            }, 500);
+
+
+        }
+
+
+
+    },
+
+    onButtonClick1: function(button, e, eOpts) {
+        var form         = Ext.getCmp('frmAddPatient').getForm(),
+            newRecord    = Ext.create('hurricane.model.Patient');
+
+        form.reset();
+        form.loadRecord(newRecord);
     },
 
     onPanelAfterRender: function(component, eOpts) {
