@@ -13,7 +13,7 @@ class ProtokollQuery
     public $results;
 
     public function __construct() {
-        $this->_db = new mysqli('localhost', 'hurricane' ,'1213456', 'hurricane2016');
+        $this->_db = new mysqli('localhost', 'hurricane' ,'123456', 'hurricane2016');
 
         $_db = $this->_db;
 
