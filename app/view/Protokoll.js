@@ -14,7 +14,7 @@
  */
 
 Ext.define('hurricane.view.Protokoll', {
-    extend: 'Ext.window.Window',
+    extend: 'Ext.panel.Panel',
     alias: 'widget.protokoll',
 
     requires: [
@@ -30,9 +30,13 @@ Ext.define('hurricane.view.Protokoll', {
     viewModel: {
         type: 'protokoll'
     },
+    id: 'pnlProtokoll',
     shrinkWrap: 0,
+    width: 250,
+    layout: 'fit',
     frameHeader: false,
     header: false,
+    manageHeight: false,
     defaultListenerScope: true,
 
     items: [
@@ -41,8 +45,11 @@ Ext.define('hurricane.view.Protokoll', {
             reference: 'form',
             id: 'frmInputProtokoll',
             itemId: 'myform3',
-            bodyPadding: 10,
-            title: 'Protokoll Eingabe',
+            width: 250,
+            layout: 'vbox',
+            bodyPadding: '10 10 10 25',
+            manageHeight: false,
+            title: 'Protokolldaten',
             titleAlign: 'center',
             listeners: {
                 afterrender: 'onFormAfterRender'
@@ -51,6 +58,7 @@ Ext.define('hurricane.view.Protokoll', {
                 {
                     xtype: 'textfield',
                     hidden: true,
+                    id: 'fldProtokollID',
                     width: 200,
                     fieldLabel: 'Protokoll Id',
                     hideLabel: true,
@@ -58,11 +66,19 @@ Ext.define('hurricane.view.Protokoll', {
                     emptyText: 'Protokoll Nummer'
                 },
                 {
+                    xtype: 'textfield',
+                    flex: 1,
+                    hidden: true,
+                    fieldLabel: 'Label',
+                    name: 'PatientenID'
+                },
+                {
                     xtype: 'datefield',
                     width: 200,
                     fieldLabel: 'Eingangs Datum',
                     hideLabel: true,
                     name: 'EingangsDatum',
+                    allowBlank: false,
                     emptyText: 'Eingangs-Datum',
                     altFormats: 'm/d/Y|n/j/Y|n/j/y|m/j/y|n/d/y|m/j/Y|n/d/Y|m-d-y|m-d-Y|m/d|m-d|md|mdy|mdY|d|Y-m-d|n-j|n/j|dmy|dmY',
                     format: 'd.m.Y',
@@ -75,7 +91,8 @@ Ext.define('hurricane.view.Protokoll', {
                     hideLabel: true,
                     name: 'PatientenNummer',
                     inputType: 'number',
-                    emptyText: 'Patienten Nummer'
+                    allowBlank: false,
+                    emptyText: 'Protokoll Nummer'
                 },
                 {
                     xtype: 'timefield',
@@ -207,6 +224,7 @@ Ext.define('hurricane.view.Protokoll', {
                     hideLabel: true,
                     name: 'HelferNr1',
                     inputType: 'number',
+                    allowBlank: false,
                     emptyText: 'Helfer Nummer 1'
                 },
                 {
@@ -220,6 +238,7 @@ Ext.define('hurricane.view.Protokoll', {
                 },
                 {
                     xtype: 'container',
+                    hidden: true,
                     padding: 10,
                     layout: {
                         type: 'hbox',

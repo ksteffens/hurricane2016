@@ -1,5 +1,5 @@
 {
-    "type": "Ext.window.Window",
+    "type": "Ext.panel.Panel",
     "reference": {
         "name": "items",
         "type": "array"
@@ -11,12 +11,15 @@
         "frameHeader": false,
         "header": false,
         "height": null,
-        "layout": null,
+        "id": "pnlProtokoll",
+        "layout": "fit",
+        "manageHeight": false,
+        "padding": null,
         "shrinkWrap": [
             "0"
         ],
         "title": null,
-        "width": null
+        "width": 250
     },
     "designerId": "06976143-d0a6-4c18-bef5-e4c46763a648",
     "viewControllerInstanceId": "48487c0a-5d6c-47e3-b20d-f1c38011c215",
@@ -30,16 +33,20 @@
             },
             "codeClass": null,
             "userConfig": {
-                "bodyPadding": 10,
+                "bodyPadding": "10 10 10 25",
+                "dock": null,
                 "id": "frmInputProtokoll",
                 "itemId": "myform3",
+                "layout": "vbox",
+                "manageHeight": false,
                 "padding": null,
                 "reference": "form",
-                "title": "Protokoll Eingabe",
-                "titleAlign": "center"
+                "title": "Protokolldaten",
+                "titleAlign": "center",
+                "width": 250
             },
             "name": "MyForm3",
-            "designerId": "74cc4310-c219-4a01-b3e1-c4d139fb611f",
+            "designerId": "46ed7cc6-f38f-4389-99b8-2d132c44e165",
             "cn": [
                 {
                     "type": "basiceventbinding",
@@ -78,11 +85,28 @@
                         "fieldLabel": "Protokoll Id",
                         "hidden": true,
                         "hideLabel": true,
+                        "id": "fldProtokollID",
                         "name": "ProtokollID",
                         "width": 200
                     },
                     "name": "MyTextField27",
                     "designerId": "94dc305d-cea2-4887-b8f1-80326f7797f4"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Label",
+                        "hidden": true,
+                        "layout|flex": 1,
+                        "name": "PatientenID"
+                    },
+                    "name": "MyTextField20",
+                    "designerId": "d56e5250-aa18-4cae-9667-0ff2be592a4f"
                 },
                 {
                     "type": "Ext.form.field.Date",
@@ -92,6 +116,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "allowBlank": false,
                         "altFormats": "m/d/Y|n/j/Y|n/j/y|m/j/y|n/d/y|m/j/Y|n/d/Y|m-d-y|m-d-Y|m/d|m-d|md|mdy|mdY|d|Y-m-d|n-j|n/j|dmy|dmY",
                         "emptyText": "Eingangs-Datum",
                         "fieldLabel": "Eingangs Datum",
@@ -112,7 +137,8 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "emptyText": "Patienten Nummer",
+                        "allowBlank": false,
+                        "emptyText": "Protokoll Nummer",
                         "fieldLabel": "Patienten Nummer",
                         "hideLabel": true,
                         "inputType": "number",
@@ -393,6 +419,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "allowBlank": false,
                         "emptyText": "Helfer Nummer 1",
                         "fieldLabel": "Helfer Nr1",
                         "hideLabel": true,
@@ -432,6 +459,7 @@
                         "container|align": "middle",
                         "container|pack": "center",
                         "designer|displayName": "buttons",
+                        "hidden": true,
                         "layout": "hbox",
                         "padding": 10
                     },

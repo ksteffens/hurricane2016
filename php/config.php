@@ -9,68 +9,68 @@
 function get_extdirect_api()
 {
 
-    $API = [
-        'QueryDatabase' => [
-            'methods' => [
-                'readPatient' => [
+    $API = array(
+        'QueryDatabase' => array(
+            'methods' => array(
+                'readPatient' => array(
                     'len' => 1
-                ],
-                'createPatient' => [
+                ),
+                'createPatient' => array(
                     'len' => 1
-                ],
-                'deletePatient' => [
+                ),
+                'deletePatient' => array(
                     'len' => 1
-                ],
-                'updatePatient' => [
+                ),
+                'updatePatient' => array(
                     'len' => 1
-                ]
-            ]
-        ],
-        'GenderQuery' => [
-            'methods' => [
-                'getGender' => [
+                )
+            )
+        ),
+        'GenderQuery' => array(
+            'methods' => array(
+                'getGender' => array(
                     'len' => 1
-                ]
-            ]
-        ],
-        'DiagnoseQuery' => [
-            'methods' => [
-                'getDiagnose' => [
+                )
+            )
+        ),
+        'DiagnoseQuery' => array(
+            'methods' => array(
+                'getDiagnose' => array(
                     'len' => 1
-                ]
-            ]
-        ],
-        'AufnahmeQuery' => [
-            'methods' => [
-                'getAufnahme' => [
+                )
+            )
+        ),
+        'AufnahmeQuery' => array(
+            'methods' => array(
+                'getAufnahme' => array(
                     'len' => 1
-                ]
-            ]
-        ],
-        'AbgangQuery' => [
-            'methods' => [
-                'getAbgang' => [
+                )
+            )
+        ),
+        'AbgangQuery' => array(
+            'methods' => array(
+                'getAbgang' => array(
                     'len' => 1
-                ]
-            ]
-        ],
-        'ProtokollQuery' => [
-            'methods' => [
-                'readProtokoll' => [
+                )
+            )
+        ),
+        'ProtokollQuery' => array(
+            'methods' => array(
+                'readProtokoll' => array(
                     'len' => 1
-                ],
-                'createProtokoll' => [
+                ),
+                'createProtokoll' => array(
                     'len' => 1
-                ],
-                'deleteProtokoll' => [
+                ),
+                'deleteProtokoll' => array(
                     'len' => 1
-                ],
-                'updateProtokoll' => [
+                ),
+                'updateProtokoll' => array(
                     'len' => 1
-                ]
-            ]
-        ]
-    ];
+                )
+            )
+        )
+    );
 
     return $API;
 }

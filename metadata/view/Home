@@ -8,7 +8,8 @@
     "userConfig": {
         "designer|initialView": true,
         "designer|userAlias": "home",
-        "designer|userClassName": "Home"
+        "designer|userClassName": "Home",
+        "layout": "fit"
     },
     "name": "MyViewport",
     "designerId": "c53eb573-a139-4e24-bf0d-7f551a715571",
@@ -23,11 +24,11 @@
             },
             "codeClass": null,
             "userConfig": {
-                "width": null
+                "layout": "fit"
             },
-            "name": "patientenlistview",
-            "designerId": "8bedb53e-b9d0-48d6-a8f2-a7244cedadf3",
-            "masterInstanceId": "cddcf432-8803-4cc2-8df0-504c9e4d8802"
+            "name": "dateneingabe",
+            "designerId": "01b0485b-a7d8-4390-ac35-e096900625d5",
+            "masterInstanceId": "e45445e9-748a-4cf9-892f-e7ccb80d736f"
         }
     ]
 }

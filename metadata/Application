@@ -28,7 +28,9 @@
             "PatientenListView",
             "EditPatient",
             "Protokoll",
-            "Protokolls"
+            "Dateneingabe",
+            "addPatient",
+            "PatietenListe"
         ]
     },
     "name": "Application",

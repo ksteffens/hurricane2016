@@ -1,25 +1,29 @@
 {
-    "type": "Ext.window.Window",
+    "type": "Ext.panel.Panel",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userAlias": "editpatient",
-        "designer|userClassName": "EditPatient",
+        "bodyPadding": null,
+        "container|align": "stretch",
+        "designer|userAlias": "addpatient",
+        "designer|userClassName": "addPatient",
         "frameHeader": false,
         "header": false,
         "height": null,
-        "id": "editPanel",
+        "id": "addPatient",
+        "layout": "vbox",
+        "manageHeight": false,
         "modal": true,
         "reference": null,
         "title": "Patienten Anzeigen",
-        "width": 400
+        "width": 250
     },
-    "designerId": "d2f5dbab-ce85-4cd2-9de6-0831ab8af78e",
-    "viewControllerInstanceId": "6c3a0e61-9557-4a60-af3f-fbeeb4026d84",
-    "viewModelInstanceId": "ad6a1196-736b-44eb-ba0f-d24b61349f2b",
+    "designerId": "028373ac-970a-4b18-9865-89da8cae3fbd",
+    "viewControllerInstanceId": "76ef3c18-836e-4a9c-879f-a373b0a278f6",
+    "viewModelInstanceId": "307e99c2-dd89-48ad-b4c2-174188fbc20f",
     "cn": [
         {
             "type": "Ext.form.Panel",
@@ -29,14 +33,16 @@
             },
             "codeClass": null,
             "userConfig": {
-                "bodyPadding": 10,
-                "id": "frmEditPatient",
+                "bodyPadding": "10 10 10 25",
+                "dock": null,
+                "id": "frmAddPatient",
                 "itemId": "myform",
                 "reference": "form",
-                "title": "Patienten Anzeigen"
+                "title": "Patientendaten",
+                "titleAlign": "center"
             },
             "name": "MyForm",
-            "designerId": "babfaa55-6079-4317-b7f7-eed529f375ef",
+            "designerId": "5e89cfa0-8104-4ccc-8a69-f1856d01f9ee",
             "customConfigs": [
                 {
                     "group": "(Custom Properties)",
@@ -59,7 +65,7 @@
                         "submitValue": true
                     },
                     "name": "MyDisplayField",
-                    "designerId": "ea3c12e2-29b4-4adb-ac4c-10dd31224762"
+                    "designerId": "d0ab21c9-73d1-402b-8f36-5d76bfcdeee1"
                 },
                 {
                     "type": "Ext.form.field.Text",
@@ -69,13 +75,18 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "allowBlank": false,
                         "designer|displayName": "Name",
+                        "emptyText": "Name",
                         "fieldLabel": "Name",
+                        "hideLabel": true,
+                        "id": "inpName",
                         "name": "Name",
-                        "readOnly": false
+                        "readOnly": false,
+                        "width": 200
                     },
                     "name": "MyTextField",
-                    "designerId": "695f4765-f7fc-41ea-8ad2-00c66f6ba30a"
+                    "designerId": "98911d6d-8ac0-4ea2-b6a4-2bafda8081f1"
                 },
                 {
                     "type": "Ext.form.field.Text",
@@ -85,12 +96,16 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "allowBlank": false,
+                        "emptyText": "Vorname",
                         "fieldLabel": "Vorname",
+                        "hideLabel": true,
                         "name": "Vorname",
-                        "readOnly": false
+                        "readOnly": false,
+                        "width": 200
                     },
                     "name": "MyTextField1",
-                    "designerId": "8ee235e1-97cd-4c1b-90f9-cd5562c7b4e2"
+                    "designerId": "2c54b5aa-4537-4563-8298-f03f99d03578"
                 },
                 {
                     "type": "Ext.form.field.Date",
@@ -100,14 +115,17 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "emptyText": "Geburtsdatum",
                         "fieldLabel": "Geburtsdatum",
                         "format": "d.m.Y",
+                        "hideLabel": true,
                         "name": "Geburtsdatum",
                         "readOnly": false,
-                        "submitFormat": "Y-m-d"
+                        "submitFormat": "Y-m-d",
+                        "width": 200
                     },
                     "name": "MyDateField",
-                    "designerId": "6fb62ddc-2307-4571-ad48-b9a653c40ef4"
+                    "designerId": "66899035-e4a7-42f2-805f-b893b72ebf8b"
                 },
                 {
                     "type": "Ext.form.field.Text",
@@ -117,12 +135,15 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "emptyText": "Strasse",
                         "fieldLabel": "Strasse",
+                        "hideLabel": true,
                         "name": "Strasse",
-                        "readOnly": false
+                        "readOnly": false,
+                        "width": 200
                     },
                     "name": "MyTextField2",
-                    "designerId": "4dbe4280-9f90-43a9-b56e-c5c10ea71ecc"
+                    "designerId": "4823d6b3-01d2-4aa5-845a-28926076c440"
                 },
                 {
                     "type": "Ext.form.field.Text",
@@ -132,12 +153,15 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "emptyText": "Plz",
                         "fieldLabel": "Plz",
+                        "hideLabel": true,
                         "name": "PLZ",
-                        "readOnly": false
+                        "readOnly": false,
+                        "width": 200
                     },
                     "name": "MyTextField3",
-                    "designerId": "70626b50-26d6-4e4c-be11-01187755315b"
+                    "designerId": "4ed799d6-6a54-4f15-8a0b-0b3ecb30a942"
                 },
                 {
                     "type": "Ext.form.field.Text",
@@ -147,12 +171,15 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "emptyText": "Ort",
                         "fieldLabel": "Ort",
+                        "hideLabel": true,
                         "name": "Ort",
-                        "readOnly": false
+                        "readOnly": false,
+                        "width": 200
                     },
                     "name": "MyTextField4",
-                    "designerId": "fa689d5d-49f8-4606-95fd-7c03935c7549"
+                    "designerId": "b82339f1-2dab-4b46-ba18-3349cb8085dd"
                 },
                 {
                     "type": "Ext.form.field.ComboBox",
@@ -162,19 +189,24 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "allowBlank": false,
                         "designer|displayName": "Geschlecht",
                         "displayField": "Beschreibung",
+                        "emptyText": "Geschlecht",
                         "fieldLabel": "Geschlecht",
-                        "id": "frmFldGeschlecht",
+                        "forceSelection": true,
+                        "hideLabel": true,
+                        "id": "frmFldGeschlecht1",
                         "name": "GeschlechtID",
                         "queryMode": "local",
                         "readOnly": false,
                         "store": "Geschlecht",
                         "value": null,
-                        "valueField": "GeschlechtID"
+                        "valueField": "GeschlechtID",
+                        "width": 200
                     },
                     "name": "MyComboBox",
-                    "designerId": "980378ae-a527-45b5-865f-453d4cbb4b54"
+                    "designerId": "0cc7a4a9-cee3-4a3f-a2ee-7c0a4b767274"
                 },
                 {
                     "type": "Ext.container.Container",
@@ -187,11 +219,12 @@
                         "container|align": "middle",
                         "container|pack": "center",
                         "designer|displayName": "buttons",
+                        "hidden": true,
                         "layout": "hbox",
                         "padding": 10
                     },
                     "name": "MyContainer",
-                    "designerId": "40e76f85-3331-4754-acd1-0f869048ad54",
+                    "designerId": "f2f9b1d2-1887-4992-92d0-009bf9c3dcc8",
                     "cn": [
                         {
                             "type": "Ext.button.Button",
@@ -208,7 +241,7 @@
                                 "text": "Speichern"
                             },
                             "name": "MyButton",
-                            "designerId": "bac6917d-7aa9-4841-acd9-0cfe31f1c42a",
+                            "designerId": "6b042483-b4b2-4931-b2f7-31485348451c",
                             "cn": [
                                 {
                                     "type": "viewcontrollereventbinding",
@@ -248,7 +281,7 @@
                                         "scope": "me"
                                     },
                                     "name": "onSave",
-                                    "designerId": "f301e7b4-a38a-4e52-8c2f-f1efd051e28d"
+                                    "designerId": "69070152-1db2-4a1d-931c-d4bcf1564be4"
                                 }
                             ]
                         },
@@ -266,7 +299,7 @@
                                 "text": "Abbrechen"
                             },
                             "name": "MyButton1",
-                            "designerId": "06b5e582-71a0-4fc6-ad35-1932d8f64f17",
+                            "designerId": "00109d51-973a-4fc9-9096-4194624b3ed8",
                             "cn": [
                                 {
                                     "type": "viewcontrollereventbinding",
@@ -285,11 +318,26 @@
                                         "scope": "me"
                                     },
                                     "name": "onCancel",
-                                    "designerId": "08ca6001-8fd0-4467-809c-214909fb733e"
+                                    "designerId": "53df85a7-3286-45c6-9991-09b47e221eda"
                                 }
                             ]
                         }
                     ]
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onFrmEditPatient1AfterRender",
+                        "name": "afterrender",
+                        "scope": "me"
+                    },
+                    "name": "onFrmEditPatient1AfterRender",
+                    "designerId": "cc319eb5-8b0f-4a9f-82a1-039ac9b5933e"
                 }
             ]
         },
@@ -303,15 +351,18 @@
             "userConfig": {
                 "fn": "onWindowAfterRender",
                 "implHandler": [
-                    "Ext.getCmp('frmEditPatient').loadRecord(component.record);",
-                    "var combo = Ext.getCmp('frmFldGeschlecht');",
-                    "combo.setValue(component.record.data.GeschlechtID);"
+                    "var form         = this.getReferences().form.getForm();",
+                    "var newRecord = Ext.create('hurricane.model.Patient');",
+                    "",
+                    "form.reset();",
+                    "",
+                    "form.loadRecord(newRecord);"
                 ],
                 "name": "afterrender",
                 "scope": "me"
             },
             "name": "onWindowAfterRender",
-            "designerId": "16d7b1e1-a0cd-468c-a1d0-4dac09ea37ba"
+            "designerId": "94e25a08-d016-4902-b944-b9c0460dae6c"
         }
     ]
 }

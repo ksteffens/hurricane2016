@@ -19,17 +19,19 @@ Ext.define('hurricane.view.Home', {
 
     requires: [
         'hurricane.view.HomeViewModel',
-        'hurricane.view.PatientenListView',
+        'hurricane.view.Dateneingabe',
         'Ext.panel.Panel'
     ],
 
     viewModel: {
         type: 'home'
     },
+    layout: 'fit',
 
     items: [
         {
-            xtype: 'patientenlistview'
+            xtype: 'dateneingabe',
+            layout: 'fit'
         }
     ]
 

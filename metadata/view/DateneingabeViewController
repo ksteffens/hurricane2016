@@ -1,0 +1,13 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "dateneingabe",
+        "designer|userClassName": "DateneingabeViewController"
+    },
+    "designerId": "159afe5c-7a8f-40cf-ad4c-b659301d100d"
+}

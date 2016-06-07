@@ -1,0 +1,13 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "patietenliste",
+        "designer|userClassName": "PatietenListeViewController"
+    },
+    "designerId": "9b3dcb85-67fa-4adf-8fec-3fb3718c80cf"
+}

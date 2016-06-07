@@ -29,6 +29,10 @@ Ext.define('hurricane.model.Protokoll', {
             name: 'ProtokollID'
         },
         {
+            type: 'int',
+            name: 'PatientenID'
+        },
+        {
             type: 'date',
             name: 'EingangsDatum',
             dateFormat: 'd.m.Y',
@@ -43,7 +47,7 @@ Ext.define('hurricane.model.Protokoll', {
             type: 'date',
             name: 'AufnahmeZeit',
             dateFormat: 'H:i',
-            dateWriteFormat: 'H:i'
+            dateWriteFormat: 'H:i:s'
         },
         {
             type: 'int',
@@ -57,7 +61,7 @@ Ext.define('hurricane.model.Protokoll', {
             type: 'date',
             name: 'AbgangZeit',
             dateFormat: 'H:i',
-            dateWriteFormat: 'H:i'
+            dateWriteFormat: 'H:i:s'
         },
         {
             type: 'int',

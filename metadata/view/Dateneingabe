@@ -1,0 +1,255 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "bodyBorder": true,
+        "container|align": "stretch",
+        "designer|userAlias": "dateneingabe",
+        "designer|userClassName": "Dateneingabe",
+        "dock": "left",
+        "frameHeader": false,
+        "header": false,
+        "height": null,
+        "layout": "hbox",
+        "manageHeight": false,
+        "title": "My Panel",
+        "width": null
+    },
+    "name": "MyPanel6",
+    "designerId": "e45445e9-748a-4cf9-892f-e7ccb80d736f",
+    "viewControllerInstanceId": "159afe5c-7a8f-40cf-ad4c-b659301d100d",
+    "viewModelInstanceId": "7c47aa01-93b3-4dc4-abf3-595b5a92bdd8",
+    "cn": [
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "bodyPadding": null,
+                "dock": "left",
+                "layout": "fit",
+                "layout|flex": 1,
+                "padding": null,
+                "title": "PatientenListe"
+            },
+            "name": "patietenliste",
+            "designerId": "53828d9e-913e-4a6e-afc1-49dc0ab07f2c",
+            "masterInstanceId": "b190d97f-e2a0-4596-8f14-cbec3d22f4ac"
+        },
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|align": "center",
+                "container|pack": "center",
+                "height": null,
+                "layout": "vbox",
+                "layout|flex": 1,
+                "maxHeight": 100000,
+                "minHeight": null
+            },
+            "name": "MyContainer5",
+            "designerId": "a6c2474c-b884-487a-82b9-a6d0178f81ea",
+            "cn": [
+                {
+                    "type": "Ext.container.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|pack": "center",
+                        "height": 438,
+                        "layout": "hbox",
+                        "layout|flex": 0
+                    },
+                    "name": "MyContainer6",
+                    "designerId": "05a39c42-3117-4947-a95b-40ac8f310b9c",
+                    "cn": [
+                        {
+                            "type": "linkedinstance",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": 1,
+                                "maxWidth": 300
+                            },
+                            "name": "addpatient",
+                            "designerId": "8ceac10b-3088-4ab9-9dc8-ba2a21af74ba",
+                            "masterInstanceId": "028373ac-970a-4b18-9865-89da8cae3fbd"
+                        },
+                        {
+                            "type": "linkedinstance",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout": "vbox",
+                                "layout|flex": 1
+                            },
+                            "name": "protokoll",
+                            "designerId": "2227d1fb-3b81-488f-ab68-22fa004da4e4",
+                            "masterInstanceId": "06976143-d0a6-4c18-bef5-e4c46763a648"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.container.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dock": "bottom",
+                        "height": 55,
+                        "layout|flex": 1,
+                        "width": null
+                    },
+                    "name": "MyContainer8",
+                    "designerId": "ded1b5b2-0aad-4eb5-9895-1b6fd96303b2",
+                    "cn": [
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "height": null,
+                                "margin": "20 10 10 10 ",
+                                "text": "Speichern"
+                            },
+                            "name": "MyButton12",
+                            "designerId": "174f6478-9565-4c91-a54b-504e12afca92",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onButtonClick",
+                                        "implHandler": [
+                                            "var form         = Ext.getCmp('frmAddPatient').getForm(),",
+                                            "    form2        = Ext.getCmp('frmInputProtokoll').getForm(),",
+                                            "    newRecord    = Ext.create('hurricane.model.Patient'),",
+                                            "    newRecord2    = Ext.create('hurricane.model.Protokoll'),    ",
+                                            "    store        = Ext.getStore('Patient'),",
+                                            "    store2\t\t = Ext.getStore('Protokoll');",
+                                            "if (form.isValid() && form2.isValid()){",
+                                            "",
+                                            "    form.updateRecord();",
+                                            "    var temp = store.add(form.getRecord());",
+                                            "",
+                                            "",
+                                            "",
+                                            "    setTimeout(function(){",
+                                            "        form2.findField('PatientenID').setValue(temp[0].data.patientID);",
+                                            "        form2.updateRecord();",
+                                            "        var temp2 = store2.add(form2.getRecord());",
+                                            "",
+                                            "",
+                                            "        form.reset();",
+                                            "        form.loadRecord(newRecord);",
+                                            "        form2.reset();",
+                                            "        form2.loadRecord(newRecord2);",
+                                            "    }, 500);",
+                                            "",
+                                            "",
+                                            "}",
+                                            "",
+                                            "",
+                                            ""
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "name": "onButtonClick",
+                                    "designerId": "fc0b224a-1eb8-40d0-ac7f-d972ed52af88"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "margin": "20 10 10 10",
+                                "text": "Abbrechen",
+                                "width": 150
+                            },
+                            "name": "MyButton13",
+                            "designerId": "dae5b146-12b6-489e-af90-6db07645c015",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onButtonClick1",
+                                        "implHandler": [
+                                            "var form         = Ext.getCmp('frmAddPatient').getForm(),",
+                                            "    newRecord    = Ext.create('hurricane.model.Patient');",
+                                            "",
+                                            "form.reset();",
+                                            "form.loadRecord(newRecord);"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "name": "onButtonClick1",
+                                    "designerId": "90df6e5d-b6d3-4ff0-90c0-6e6c368a2e9e"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "viewcontrollereventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onPanelAfterRender",
+                "implHandler": [
+                    "var form = Ext.getCmp('frmAddPatient').getForm().findField('Name').focus();"
+                ],
+                "name": "afterrender",
+                "scope": "me"
+            },
+            "name": "onPanelAfterRender",
+            "designerId": "dd6b33cb-0382-458a-9ff1-0bb76c25c958"
+        }
+    ]
+}

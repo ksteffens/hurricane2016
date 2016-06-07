@@ -14,7 +14,7 @@ class QueryDatabase
     public $results;
 
     public function __construct() {
-        $this->_db = new mysqli('localhost', 'hurricane' ,'123456', 'hurricane2016');
+        $this->_db = new mysqli('localhost', 'hurricane' ,'1213456', 'hurricane2016');
 
         $_db = $this->_db;
 
@@ -63,6 +63,17 @@ class QueryDatabase
 
         $_result = $_db->query($sql) or
         die('Connection Error: ' . $_db->connect_error);
+    }
+
+    public function createPatient($params) {
+        $_db = $this->_db;
+        error_log(print_r($params, 1));
+        $sql = "INSERT INTO Patient (Name, Vorname, Geburtsdatum, Strasse, PLZ, Ort, GeschlechtID) 
+                VALUES ('$params->Name', '$params->Vorname', '$params->Geburtsdatum', '$params->Strasse', '$params->PLZ', '$params->Ort', '$params->GeschlechtID');";
+        $_result = $_db->query($sql) or
+        die('Connection Error: ' . $_db->connect_error);
+        $params->patientID = $_db->insert_id;
+        return $params;
     }
 
 }
