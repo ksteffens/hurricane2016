@@ -22,272 +22,362 @@
     "viewModelInstanceId": "ad6a1196-736b-44eb-ba0f-d24b61349f2b",
     "cn": [
         {
-            "type": "Ext.form.Panel",
+            "type": "Ext.tab.Panel",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "bodyPadding": 10,
-                "id": "frmEditPatient",
-                "itemId": "myform",
-                "reference": "form",
-                "title": "Patienten Anzeigen"
+                "activeTab": 0
             },
-            "name": "MyForm",
-            "designerId": "babfaa55-6079-4317-b7f7-eed529f375ef",
-            "customConfigs": [
-                {
-                    "group": "(Custom Properties)",
-                    "name": "storeID",
-                    "type": "string"
-                }
-            ],
+            "name": "MyTabPanel",
+            "designerId": "1dee8fb2-982f-463d-806d-0e38b9008449",
             "cn": [
                 {
-                    "type": "Ext.form.field.Display",
+                    "type": "Ext.panel.Panel",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "fieldLabel": "Patient Id",
-                        "hidden": true,
-                        "name": "patientID",
-                        "submitValue": true
+                        "title": "Patient"
                     },
-                    "name": "MyDisplayField",
-                    "designerId": "ea3c12e2-29b4-4adb-ac4c-10dd31224762"
-                },
-                {
-                    "type": "Ext.form.field.Text",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "designer|displayName": "Name",
-                        "fieldLabel": "Name",
-                        "name": "Name",
-                        "readOnly": false
-                    },
-                    "name": "MyTextField",
-                    "designerId": "695f4765-f7fc-41ea-8ad2-00c66f6ba30a"
-                },
-                {
-                    "type": "Ext.form.field.Text",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "fieldLabel": "Vorname",
-                        "name": "Vorname",
-                        "readOnly": false
-                    },
-                    "name": "MyTextField1",
-                    "designerId": "8ee235e1-97cd-4c1b-90f9-cd5562c7b4e2"
-                },
-                {
-                    "type": "Ext.form.field.Date",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "fieldLabel": "Geburtsdatum",
-                        "format": "d.m.Y",
-                        "name": "Geburtsdatum",
-                        "readOnly": false,
-                        "submitFormat": "Y-m-d"
-                    },
-                    "name": "MyDateField",
-                    "designerId": "6fb62ddc-2307-4571-ad48-b9a653c40ef4"
-                },
-                {
-                    "type": "Ext.form.field.Text",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "fieldLabel": "Strasse",
-                        "name": "Strasse",
-                        "readOnly": false
-                    },
-                    "name": "MyTextField2",
-                    "designerId": "4dbe4280-9f90-43a9-b56e-c5c10ea71ecc"
-                },
-                {
-                    "type": "Ext.form.field.Text",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "fieldLabel": "Plz",
-                        "name": "PLZ",
-                        "readOnly": false
-                    },
-                    "name": "MyTextField3",
-                    "designerId": "70626b50-26d6-4e4c-be11-01187755315b"
-                },
-                {
-                    "type": "Ext.form.field.Text",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "fieldLabel": "Ort",
-                        "name": "Ort",
-                        "readOnly": false
-                    },
-                    "name": "MyTextField4",
-                    "designerId": "fa689d5d-49f8-4606-95fd-7c03935c7549"
-                },
-                {
-                    "type": "Ext.form.field.ComboBox",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "designer|displayName": "Geschlecht",
-                        "displayField": "Beschreibung",
-                        "fieldLabel": "Geschlecht",
-                        "id": "frmFldGeschlecht",
-                        "name": "GeschlechtID",
-                        "queryMode": "local",
-                        "readOnly": false,
-                        "store": "Geschlecht",
-                        "value": null,
-                        "valueField": "GeschlechtID"
-                    },
-                    "name": "MyComboBox",
-                    "designerId": "980378ae-a527-45b5-865f-453d4cbb4b54"
-                },
-                {
-                    "type": "Ext.container.Container",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "container|align": "middle",
-                        "container|pack": "center",
-                        "designer|displayName": "buttons",
-                        "layout": "hbox",
-                        "padding": 10
-                    },
-                    "name": "MyContainer",
-                    "designerId": "40e76f85-3331-4754-acd1-0f869048ad54",
+                    "name": "MyPanel",
+                    "designerId": "e5ac2ea6-2ef9-4599-9b27-bf12d5ef3d61",
                     "cn": [
                         {
-                            "type": "Ext.button.Button",
+                            "type": "Ext.tab.Tab",
                             "reference": {
-                                "name": "items",
-                                "type": "array"
+                                "name": "tabConfig",
+                                "type": "object"
                             },
                             "codeClass": null,
-                            "userConfig": {
-                                "formBind": true,
-                                "itemId": "saveButton",
-                                "layout|flex": 1,
-                                "margin": 5,
-                                "text": "Speichern"
-                            },
-                            "name": "MyButton",
-                            "designerId": "bac6917d-7aa9-4841-acd9-0cfe31f1c42a",
-                            "cn": [
-                                {
-                                    "type": "viewcontrollereventbinding",
-                                    "reference": {
-                                        "name": "listeners",
-                                        "type": "array"
-                                    },
-                                    "codeClass": null,
-                                    "userConfig": {
-                                        "fn": "onSave",
-                                        "implHandler": [
-                                            "var form = this.getReferences().form,",
-                                            "    values = form.getForm().getValues(),",
-                                            "    store = Ext.getStore('Patient'),",
-                                            "    record = form.getRecord();",
-                                            "record.set(values);",
-                                            "",
-                                            "// Valid",
-                                            "if (form.isValid()) {",
-                                            "",
-                                            "    //store.update(record);",
-                                            "    store.sync({",
-                                            "        success:function() {",
-                                            "            store.load();",
-                                            "        }",
-                                            "",
-                                            "    });",
-                                            "",
-                                            "",
-                                            "",
-                                            "}",
-                                            "            Ext.getCmp('editPanel').close();",
-                                            "",
-                                            ""
-                                        ],
-                                        "name": "click",
-                                        "scope": "me"
-                                    },
-                                    "name": "onSave",
-                                    "designerId": "f301e7b4-a38a-4e52-8c2f-f1efd051e28d"
-                                }
-                            ]
+                            "name": "TabConfig",
+                            "designerId": "fd0d3a33-f30f-49d4-9fbd-633c0d376e41"
                         },
                         {
-                            "type": "Ext.button.Button",
+                            "type": "Ext.form.Panel",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "itemId": "cancelButton",
-                                "layout|flex": 1,
-                                "margin": 5,
-                                "text": "Abbrechen"
+                                "bodyPadding": 10,
+                                "id": "frmEditPatient",
+                                "itemId": "myform",
+                                "reference": "form",
+                                "title": "Patienten Anzeigen"
                             },
-                            "name": "MyButton1",
-                            "designerId": "06b5e582-71a0-4fc6-ad35-1932d8f64f17",
+                            "name": "MyForm",
+                            "designerId": "babfaa55-6079-4317-b7f7-eed529f375ef",
+                            "customConfigs": [
+                                {
+                                    "group": "(Custom Properties)",
+                                    "name": "storeID",
+                                    "type": "string"
+                                }
+                            ],
                             "cn": [
                                 {
-                                    "type": "viewcontrollereventbinding",
+                                    "type": "Ext.form.field.Display",
                                     "reference": {
-                                        "name": "listeners",
+                                        "name": "items",
                                         "type": "array"
                                     },
                                     "codeClass": null,
                                     "userConfig": {
-                                        "fn": "onCancel",
-                                        "implHandler": [
-                                            "var form = this.getReferences().form;",
-                                            "Ext.getCmp('editPanel').close();"
-                                        ],
-                                        "name": "click",
-                                        "scope": "me"
+                                        "fieldLabel": "Patient Id",
+                                        "hidden": true,
+                                        "name": "patientID",
+                                        "submitValue": true
                                     },
-                                    "name": "onCancel",
-                                    "designerId": "08ca6001-8fd0-4467-809c-214909fb733e"
+                                    "name": "MyDisplayField",
+                                    "designerId": "ea3c12e2-29b4-4adb-ac4c-10dd31224762"
+                                },
+                                {
+                                    "type": "Ext.form.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|displayName": "Name",
+                                        "fieldLabel": "Name",
+                                        "name": "Name",
+                                        "readOnly": false
+                                    },
+                                    "name": "MyTextField",
+                                    "designerId": "695f4765-f7fc-41ea-8ad2-00c66f6ba30a"
+                                },
+                                {
+                                    "type": "Ext.form.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fieldLabel": "Vorname",
+                                        "name": "Vorname",
+                                        "readOnly": false
+                                    },
+                                    "name": "MyTextField1",
+                                    "designerId": "8ee235e1-97cd-4c1b-90f9-cd5562c7b4e2"
+                                },
+                                {
+                                    "type": "Ext.form.field.Date",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fieldLabel": "Geburtsdatum",
+                                        "format": "d.m.Y",
+                                        "name": "Geburtsdatum",
+                                        "readOnly": false,
+                                        "submitFormat": "Y-m-d"
+                                    },
+                                    "name": "MyDateField",
+                                    "designerId": "6fb62ddc-2307-4571-ad48-b9a653c40ef4"
+                                },
+                                {
+                                    "type": "Ext.form.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fieldLabel": "Strasse",
+                                        "name": "Strasse",
+                                        "readOnly": false
+                                    },
+                                    "name": "MyTextField2",
+                                    "designerId": "4dbe4280-9f90-43a9-b56e-c5c10ea71ecc"
+                                },
+                                {
+                                    "type": "Ext.form.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fieldLabel": "Plz",
+                                        "name": "PLZ",
+                                        "readOnly": false
+                                    },
+                                    "name": "MyTextField3",
+                                    "designerId": "70626b50-26d6-4e4c-be11-01187755315b"
+                                },
+                                {
+                                    "type": "Ext.form.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fieldLabel": "Ort",
+                                        "name": "Ort",
+                                        "readOnly": false
+                                    },
+                                    "name": "MyTextField4",
+                                    "designerId": "fa689d5d-49f8-4606-95fd-7c03935c7549"
+                                },
+                                {
+                                    "type": "Ext.form.field.ComboBox",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|displayName": "Geschlecht",
+                                        "displayField": "Beschreibung",
+                                        "fieldLabel": "Geschlecht",
+                                        "id": "frmFldGeschlecht",
+                                        "name": "GeschlechtID",
+                                        "queryMode": "local",
+                                        "readOnly": false,
+                                        "store": "Geschlecht",
+                                        "value": null,
+                                        "valueField": "GeschlechtID"
+                                    },
+                                    "name": "MyComboBox",
+                                    "designerId": "980378ae-a527-45b5-865f-453d4cbb4b54"
+                                },
+                                {
+                                    "type": "Ext.container.Container",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "container|align": "middle",
+                                        "container|pack": "center",
+                                        "designer|displayName": "buttons",
+                                        "layout": "hbox",
+                                        "padding": 10
+                                    },
+                                    "name": "MyContainer",
+                                    "designerId": "40e76f85-3331-4754-acd1-0f869048ad54",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.button.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "formBind": true,
+                                                "itemId": "saveButton",
+                                                "layout|flex": 1,
+                                                "margin": 5,
+                                                "text": "Speichern"
+                                            },
+                                            "name": "MyButton",
+                                            "designerId": "bac6917d-7aa9-4841-acd9-0cfe31f1c42a",
+                                            "cn": [
+                                                {
+                                                    "type": "viewcontrollereventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onSave",
+                                                        "implHandler": [
+                                                            "var form = this.getReferences().form,",
+                                                            "    values = form.getForm().getValues(),",
+                                                            "    store = Ext.getStore('Patient'),",
+                                                            "    record = form.getRecord();",
+                                                            "record.set(values);",
+                                                            "",
+                                                            "// Valid",
+                                                            "if (form.isValid()) {",
+                                                            "",
+                                                            "    //store.update(record);",
+                                                            "    store.sync({",
+                                                            "        success:function() {",
+                                                            "            store.load();",
+                                                            "        }",
+                                                            "",
+                                                            "    });",
+                                                            "",
+                                                            "",
+                                                            "",
+                                                            "}",
+                                                            "            Ext.getCmp('editPanel').close();",
+                                                            "",
+                                                            ""
+                                                        ],
+                                                        "name": "click",
+                                                        "scope": "me"
+                                                    },
+                                                    "name": "onSave",
+                                                    "designerId": "f301e7b4-a38a-4e52-8c2f-f1efd051e28d"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.button.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "itemId": "cancelButton",
+                                                "layout|flex": 1,
+                                                "margin": 5,
+                                                "text": "Abbrechen"
+                                            },
+                                            "name": "MyButton1",
+                                            "designerId": "06b5e582-71a0-4fc6-ad35-1932d8f64f17",
+                                            "cn": [
+                                                {
+                                                    "type": "viewcontrollereventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onCancel",
+                                                        "implHandler": [
+                                                            "var form = this.getReferences().form;",
+                                                            "Ext.getCmp('editPanel').close();"
+                                                        ],
+                                                        "name": "click",
+                                                        "scope": "me"
+                                                    },
+                                                    "name": "onCancel",
+                                                    "designerId": "08ca6001-8fd0-4467-809c-214909fb733e"
+                                                }
+                                            ]
+                                        }
+                                    ]
                                 }
                             ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "title": "Tab 2"
+                    },
+                    "name": "MyPanel1",
+                    "designerId": "3cf3473c-e72b-4420-8667-cd09fa9c12d6",
+                    "cn": [
+                        {
+                            "type": "Ext.tab.Tab",
+                            "reference": {
+                                "name": "tabConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "TabConfig1",
+                            "designerId": "00b4037f-da43-440e-b56c-793269ca2138"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "title": "Tab 3"
+                    },
+                    "name": "MyPanel2",
+                    "designerId": "1364e4ba-d4cb-494f-b239-465dec870446",
+                    "cn": [
+                        {
+                            "type": "Ext.tab.Tab",
+                            "reference": {
+                                "name": "tabConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "TabConfig2",
+                            "designerId": "6f2eaa56-fdc7-489f-a915-3e1789b4ffe9"
                         }
                     ]
                 }

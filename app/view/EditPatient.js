@@ -20,11 +20,12 @@ Ext.define('hurricane.view.EditPatient', {
     requires: [
         'hurricane.view.EditPatientViewModel',
         'hurricane.view.EditPatientViewController',
+        'Ext.tab.Panel',
+        'Ext.tab.Tab',
         'Ext.form.Panel',
         'Ext.form.field.Display',
         'Ext.form.field.Date',
-        'Ext.form.field.ComboBox',
-        'Ext.button.Button'
+        'Ext.form.field.ComboBox'
     ],
 
     controller: 'editpatient',
@@ -41,106 +42,126 @@ Ext.define('hurricane.view.EditPatient', {
 
     items: [
         {
-            xtype: 'form',
-            reference: 'form',
-            id: 'frmEditPatient',
-            itemId: 'myform',
-            bodyPadding: 10,
-            title: 'Patienten Anzeigen',
+            xtype: 'tabpanel',
+            activeTab: 0,
             items: [
                 {
-                    xtype: 'displayfield',
-                    hidden: true,
-                    fieldLabel: 'Patient Id',
-                    name: 'patientID',
-                    submitValue: true
-                },
-                {
-                    xtype: 'textfield',
-                    fieldLabel: 'Name',
-                    name: 'Name',
-                    readOnly: false
-                },
-                {
-                    xtype: 'textfield',
-                    fieldLabel: 'Vorname',
-                    name: 'Vorname',
-                    readOnly: false
-                },
-                {
-                    xtype: 'datefield',
-                    fieldLabel: 'Geburtsdatum',
-                    name: 'Geburtsdatum',
-                    readOnly: false,
-                    format: 'd.m.Y',
-                    submitFormat: 'Y-m-d'
-                },
-                {
-                    xtype: 'textfield',
-                    fieldLabel: 'Strasse',
-                    name: 'Strasse',
-                    readOnly: false
-                },
-                {
-                    xtype: 'textfield',
-                    fieldLabel: 'Plz',
-                    name: 'PLZ',
-                    readOnly: false
-                },
-                {
-                    xtype: 'textfield',
-                    fieldLabel: 'Ort',
-                    name: 'Ort',
-                    readOnly: false
-                },
-                {
-                    xtype: 'combobox',
-                    id: 'frmFldGeschlecht',
-                    fieldLabel: 'Geschlecht',
-                    name: 'GeschlechtID',
-                    readOnly: false,
-                    displayField: 'Beschreibung',
-                    queryMode: 'local',
-                    store: 'Geschlecht',
-                    valueField: 'GeschlechtID'
-                },
-                {
-                    xtype: 'container',
-                    padding: 10,
-                    layout: {
-                        type: 'hbox',
-                        align: 'middle',
-                        pack: 'center'
-                    },
+                    xtype: 'panel',
+                    title: 'Patient',
                     items: [
                         {
-                            xtype: 'button',
-                            flex: 1,
-                            formBind: true,
-                            itemId: 'saveButton',
-                            margin: 5,
-                            text: 'Speichern',
-                            listeners: {
-                                click: {
-                                    fn: 'onSave',
-                                    scope: 'controller'
+                            xtype: 'form',
+                            reference: 'form',
+                            id: 'frmEditPatient',
+                            itemId: 'myform',
+                            bodyPadding: 10,
+                            title: 'Patienten Anzeigen',
+                            items: [
+                                {
+                                    xtype: 'displayfield',
+                                    hidden: true,
+                                    fieldLabel: 'Patient Id',
+                                    name: 'patientID',
+                                    submitValue: true
+                                },
+                                {
+                                    xtype: 'textfield',
+                                    fieldLabel: 'Name',
+                                    name: 'Name',
+                                    readOnly: false
+                                },
+                                {
+                                    xtype: 'textfield',
+                                    fieldLabel: 'Vorname',
+                                    name: 'Vorname',
+                                    readOnly: false
+                                },
+                                {
+                                    xtype: 'datefield',
+                                    fieldLabel: 'Geburtsdatum',
+                                    name: 'Geburtsdatum',
+                                    readOnly: false,
+                                    format: 'd.m.Y',
+                                    submitFormat: 'Y-m-d'
+                                },
+                                {
+                                    xtype: 'textfield',
+                                    fieldLabel: 'Strasse',
+                                    name: 'Strasse',
+                                    readOnly: false
+                                },
+                                {
+                                    xtype: 'textfield',
+                                    fieldLabel: 'Plz',
+                                    name: 'PLZ',
+                                    readOnly: false
+                                },
+                                {
+                                    xtype: 'textfield',
+                                    fieldLabel: 'Ort',
+                                    name: 'Ort',
+                                    readOnly: false
+                                },
+                                {
+                                    xtype: 'combobox',
+                                    id: 'frmFldGeschlecht',
+                                    fieldLabel: 'Geschlecht',
+                                    name: 'GeschlechtID',
+                                    readOnly: false,
+                                    displayField: 'Beschreibung',
+                                    queryMode: 'local',
+                                    store: 'Geschlecht',
+                                    valueField: 'GeschlechtID'
+                                },
+                                {
+                                    xtype: 'container',
+                                    padding: 10,
+                                    layout: {
+                                        type: 'hbox',
+                                        align: 'middle',
+                                        pack: 'center'
+                                    },
+                                    items: [
+                                        {
+                                            xtype: 'button',
+                                            flex: 1,
+                                            formBind: true,
+                                            itemId: 'saveButton',
+                                            margin: 5,
+                                            text: 'Speichern',
+                                            listeners: {
+                                                click: {
+                                                    fn: 'onSave',
+                                                    scope: 'controller'
+                                                }
+                                            }
+                                        },
+                                        {
+                                            xtype: 'button',
+                                            flex: 1,
+                                            itemId: 'cancelButton',
+                                            margin: 5,
+                                            text: 'Abbrechen',
+                                            listeners: {
+                                                click: {
+                                                    fn: 'onCancel',
+                                                    scope: 'controller'
+                                                }
+                                            }
+                                        }
+                                    ]
                                 }
-                            }
-                        },
-                        {
-                            xtype: 'button',
-                            flex: 1,
-                            itemId: 'cancelButton',
-                            margin: 5,
-                            text: 'Abbrechen',
-                            listeners: {
-                                click: {
-                                    fn: 'onCancel',
-                                    scope: 'controller'
-                                }
-                            }
+                            ]
                         }
                     ]
+                },
+                {
+                    xtype: 'panel',
+                    title: 'Tab 2'
+                },
+                {
+                    xtype: 'panel',
+                    title: 'Tab 3'
                 }
             ]
         }
