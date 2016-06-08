@@ -18,6 +18,7 @@ class QueryDatabase
 
         $_db = $this->_db;
 		
+		error_log('QueryDatabase');
 		error_log($_db->error);
 		error_log(print_r($_db, 1));
 

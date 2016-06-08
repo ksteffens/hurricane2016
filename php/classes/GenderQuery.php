@@ -18,6 +18,7 @@ class GenderQuery
 
         $_db = $this->_db;
 		
+		error_log('GenderQuery');
 		error_log($_db->error);
 		error_log(print_r($_db, 1));
 
