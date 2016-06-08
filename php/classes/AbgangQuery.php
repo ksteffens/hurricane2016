@@ -16,7 +16,7 @@ class AbgangQuery
         $this->_db = new mysqli('localhost', 'hurricane' ,'123456', 'hurricane2016');
 
 		error_log($_db->error);
-		error_log($_db);
+		error_log(print_r($_db, 1));
 
         if ($_db->connect_error) {
             die('Connection Error: ' . $_db->connect_error);
