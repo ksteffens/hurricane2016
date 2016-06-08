@@ -18,8 +18,6 @@ class ProtokollQuery
         $_db = $this->_db;
 		
 		error_log('ProtokollQuery');
-		error_log($_db->error);
-		error_log(print_r($_db, 1));
 
         if ($_db->connect_error) {
             die('Connection Error: ' . $_db->connect_error);
@@ -33,8 +31,8 @@ class ProtokollQuery
     public function readProtokoll($params) {
         $_db = $this->_db;
 
-        $_result = $_db->query("SELECT * FROM `Protokoll`") or
-        die('Connection Error: ' . $_db->connect_error);
+        $_result = $_db->query("SELECT * FROM `Protokoll`");// or
+       // die('Connection Error: ' . $_db->connect_error);
         $results = array();
 
 

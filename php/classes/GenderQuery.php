@@ -19,12 +19,10 @@ class GenderQuery
         $_db = $this->_db;
 		
 		error_log('GenderQuery');
-		error_log($_db->error);
-		error_log(print_r($_db, 1));
 
-//        if ($_db->connect_error) {
-//            die('Connection Error: ' . $_db->connect_error);
-//        }
+        if ($_db->connect_error) {
+            die('Connection Error: ' . $_db->connect_error);
+        }
 
         $_db->set_charset("utf8");
         
@@ -37,10 +35,8 @@ class GenderQuery
         $sql = "SELECT GeschlechtID, Beschreibung
                 FROM Geschlecht";
 
-error_log('vorher');
-        $_result = $_db->query($sql) or
-        die('Connection Error: ' . $_db->connect_error);
-error_log('nachher');		
+        $_result = $_db->query($sql); //or
+        //die('Connection Error: ' . $_db->connect_error);		
         $results = array();
 
         while ($row = $_result->fetch_assoc()) {
