@@ -32,8 +32,8 @@ class QueryDatabase
     public function readPatient($params) {
         $_db = $this->_db;
 
-        $_result = $_db->query("SELECT * FROM patient");// or
-      //  die('Connection Error: ' . $_db->connect_error);
+        $_result = $_db->query("SELECT * FROM patient") or
+        die('Connection Error: ' . $_db->connect_error);
         $results = array();
 
         while ($row = $_result->fetch_assoc()) {

@@ -31,8 +31,8 @@ class DiagnoseQuery
     public function getDiagnose($params) {
         $_db = $this->_db;
 
-        $_result = $_db->query("SELECT * FROM `Diagnoseschluessel`");// or
-      //  die('Connection Error: ' . $_db->connect_error);
+        $_result = $_db->query("SELECT * FROM `Diagnoseschluessel`") or
+        die('Connection Error: ' . $_db->connect_error);
         $results = array();
 
 

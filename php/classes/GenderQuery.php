@@ -35,8 +35,8 @@ class GenderQuery
         $sql = "SELECT GeschlechtID, Beschreibung
                 FROM Geschlecht";
 
-        $_result = $_db->query($sql); //or
-        //die('Connection Error: ' . $_db->connect_error);		
+        $_result = $_db->query($sql)or
+        die('Connection Error: ' . $_db->connect_error);		
         $results = array();
 
         while ($row = $_result->fetch_assoc()) {
