@@ -15,7 +15,6 @@ class AbgangQuery
     public function __construct() {
         $this->_db = new mysqli('localhost', 'hurricane' ,'123456', 'hurricane2016');
 
-error_log(12345);
         $_db = $this->_db;
 
         if ($_db->connect_error) {
