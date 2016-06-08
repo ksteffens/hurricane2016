@@ -18,6 +18,7 @@ class DiagnoseQuery
         $_db = $this->_db;
 		
 		error_log($_db->error);
+		error_log($_db);
 
         if ($_db->connect_error) {
             die('Connection Error: ' . $_db->connect_error);
