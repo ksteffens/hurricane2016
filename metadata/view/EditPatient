@@ -8,8 +8,6 @@
     "userConfig": {
         "designer|userAlias": "editpatient",
         "designer|userClassName": "EditPatient",
-        "frameHeader": false,
-        "header": false,
         "height": null,
         "id": "editPanel",
         "modal": true,
@@ -29,7 +27,8 @@
             },
             "codeClass": null,
             "userConfig": {
-                "activeTab": 0
+                "activeTab": 0,
+                "id": "patientenPanel"
             },
             "name": "MyTabPanel",
             "designerId": "1dee8fb2-982f-463d-806d-0e38b9008449",
@@ -42,6 +41,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "id": null,
                         "title": "Patient"
                     },
                     "name": "MyPanel",
@@ -65,7 +65,9 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "bodyPadding": 10,
+                                "bodyPadding": "20 20 20 30",
+                                "frameHeader": false,
+                                "header": false,
                                 "id": "frmEditPatient",
                                 "itemId": "myform",
                                 "reference": "form",
@@ -328,56 +330,6 @@
                                     ]
                                 }
                             ]
-                        }
-                    ]
-                },
-                {
-                    "type": "Ext.panel.Panel",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "title": "Tab 2"
-                    },
-                    "name": "MyPanel1",
-                    "designerId": "3cf3473c-e72b-4420-8667-cd09fa9c12d6",
-                    "cn": [
-                        {
-                            "type": "Ext.tab.Tab",
-                            "reference": {
-                                "name": "tabConfig",
-                                "type": "object"
-                            },
-                            "codeClass": null,
-                            "name": "TabConfig1",
-                            "designerId": "00b4037f-da43-440e-b56c-793269ca2138"
-                        }
-                    ]
-                },
-                {
-                    "type": "Ext.panel.Panel",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "title": "Tab 3"
-                    },
-                    "name": "MyPanel2",
-                    "designerId": "1364e4ba-d4cb-494f-b239-465dec870446",
-                    "cn": [
-                        {
-                            "type": "Ext.tab.Tab",
-                            "reference": {
-                                "name": "tabConfig",
-                                "type": "object"
-                            },
-                            "codeClass": null,
-                            "name": "TabConfig2",
-                            "designerId": "6f2eaa56-fdc7-489f-a915-3e1789b4ffe9"
                         }
                     ]
                 }

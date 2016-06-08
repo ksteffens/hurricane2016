@@ -1,0 +1,13 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "showprotokoll",
+        "designer|userClassName": "showProtokollViewController"
+    },
+    "designerId": "6644392e-d0a3-4402-ad16-983e60cd6f4e"
+}

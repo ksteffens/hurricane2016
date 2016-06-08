@@ -1,2 +1,2 @@
 Compass.add_project_configuration('../../../../../sass/config.rb')
-cache_path = '/Volumes/EigenDaten/ksteffens/Git/hurricane2016/build/.sass-cache'
+cache_path = '/Users/ksteffens/server/apache/mail.test/build/.sass-cache'

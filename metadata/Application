@@ -30,7 +30,8 @@
             "Protokoll",
             "Dateneingabe",
             "addPatient",
-            "PatietenListe"
+            "PatietenListe",
+            "showProtokoll"
         ]
     },
     "name": "Application",

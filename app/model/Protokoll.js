@@ -41,7 +41,8 @@ Ext.define('hurricane.model.Protokoll', {
         {
             type: 'int',
             allowNull: true,
-            name: 'PatientenNummer'
+            name: 'PatientenNummer',
+            unique: true
         },
         {
             type: 'date',

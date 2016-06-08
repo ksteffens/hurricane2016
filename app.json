@@ -36,7 +36,7 @@
    },
    "js": [
       {
-         "path": "php/api.php",
+         "path": "resources/php/api.php",
          "remote": true
       },
       {

@@ -35,14 +35,13 @@ Ext.define('hurricane.view.EditPatient', {
     modal: true,
     id: 'editPanel',
     width: 400,
-    frameHeader: false,
-    header: false,
     title: 'Patienten Anzeigen',
     defaultListenerScope: true,
 
     items: [
         {
             xtype: 'tabpanel',
+            id: 'patientenPanel',
             activeTab: 0,
             items: [
                 {
@@ -54,7 +53,9 @@ Ext.define('hurricane.view.EditPatient', {
                             reference: 'form',
                             id: 'frmEditPatient',
                             itemId: 'myform',
-                            bodyPadding: 10,
+                            bodyPadding: '20 20 20 30',
+                            frameHeader: false,
+                            header: false,
                             title: 'Patienten Anzeigen',
                             items: [
                                 {
@@ -154,14 +155,6 @@ Ext.define('hurricane.view.EditPatient', {
                             ]
                         }
                     ]
-                },
-                {
-                    xtype: 'panel',
-                    title: 'Tab 2'
-                },
-                {
-                    xtype: 'panel',
-                    title: 'Tab 3'
                 }
             ]
         }

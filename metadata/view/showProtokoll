@@ -1,0 +1,411 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "showprotokoll",
+        "designer|userClassName": "showProtokoll",
+        "frameHeader": false,
+        "header": false,
+        "height": null,
+        "title": "My Panel",
+        "width": 400
+    },
+    "designerId": "2a750201-466f-4a5a-b68c-42c54a3852dc",
+    "viewControllerInstanceId": "6644392e-d0a3-4402-ad16-983e60cd6f4e",
+    "viewModelInstanceId": "f51ba892-908d-4181-903e-034ec5422c01",
+    "cn": [
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "bodyPadding": "20 20 20 25",
+                "frameHeader": false,
+                "header": false,
+                "height": null,
+                "itemId": "myform2",
+                "reference": "form",
+                "title": "My Form"
+            },
+            "name": "MyForm2",
+            "designerId": "e5bdba7a-85ff-47ae-bcf2-4404f0420d86",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Display",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Protokoll Id",
+                        "hidden": true,
+                        "name": "ProtokollID",
+                        "width": 180
+                    },
+                    "name": "MyDisplayField1",
+                    "designerId": "658ee864-c6c8-47b1-8d60-34d1c03d9d12"
+                },
+                {
+                    "type": "Ext.form.field.Display",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Patienten Id",
+                        "hidden": true,
+                        "name": "PatientenID",
+                        "width": 180
+                    },
+                    "name": "MyDisplayField2",
+                    "designerId": "5405b723-1124-4253-b603-be7ed7b8c3de"
+                },
+                {
+                    "type": "Ext.form.field.Date",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Eingangs Datum",
+                        "labelWidth": 150,
+                        "name": "EingangsDatum",
+                        "readOnly": true,
+                        "width": 350
+                    },
+                    "name": "MyDateField1",
+                    "designerId": "5673b184-e099-422f-a0e0-4e987c681d9d"
+                },
+                {
+                    "type": "Ext.form.field.Number",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Patienten Nummer",
+                        "labelWidth": 150,
+                        "name": "PatientenNummer",
+                        "readOnly": true,
+                        "width": 350
+                    },
+                    "name": "MyNumberField",
+                    "designerId": "6b1bb877-0ace-46ec-836f-4ccd5f203d6f"
+                },
+                {
+                    "type": "Ext.form.field.Date",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Aufnahme Zeit",
+                        "labelWidth": 150,
+                        "name": "AufnahmeZeit",
+                        "readOnly": true,
+                        "width": 350
+                    },
+                    "name": "MyDateField2",
+                    "designerId": "b20ad6e6-c6b9-4241-a3f5-46fbffff95c1"
+                },
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Aufnahme Id",
+                        "labelWidth": 150,
+                        "name": "AufnahmeID",
+                        "readOnly": true,
+                        "width": 350
+                    },
+                    "name": "MyComboBox1",
+                    "designerId": "fd7a8e62-ae0c-4a82-952b-a9c1922a997b"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Aufnahme Ktw",
+                        "labelWidth": 150,
+                        "name": "AufnahmeKTW",
+                        "readOnly": true,
+                        "width": 350
+                    },
+                    "name": "MyTextField5",
+                    "designerId": "c188aaba-33cd-43ab-8911-fab95752c36c"
+                },
+                {
+                    "type": "Ext.form.field.Date",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Abgang Zeit",
+                        "labelWidth": 150,
+                        "name": "AbgangZeit",
+                        "readOnly": true,
+                        "width": 350
+                    },
+                    "name": "MyDateField4",
+                    "designerId": "8da055e2-69fb-49a0-94ab-bc19574ea7dd"
+                },
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Abgang Id",
+                        "labelWidth": 150,
+                        "name": "AbgangID",
+                        "readOnly": true,
+                        "width": 350
+                    },
+                    "name": "MyComboBox2",
+                    "designerId": "c1913ba5-21b6-4d70-b4f5-ed51a0cd452c"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Abgang Uebergabe",
+                        "labelWidth": 150,
+                        "name": "AbgangUebergabe",
+                        "readOnly": true,
+                        "width": 350
+                    },
+                    "name": "MyTextField6",
+                    "designerId": "1c091235-7630-4fe2-8f4e-15091daffda1"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Abgang Ziel",
+                        "labelWidth": 150,
+                        "name": "AbgangZiel",
+                        "readOnly": true,
+                        "width": 350
+                    },
+                    "name": "MyTextField7",
+                    "designerId": "b54bce59-f5bb-4745-8ade-66bbd21904a7"
+                },
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Diagnose Id",
+                        "labelWidth": 150,
+                        "name": "DiagnoseID",
+                        "readOnly": true,
+                        "width": 350
+                    },
+                    "name": "MyComboBox3",
+                    "designerId": "2b423929-9d40-44e3-9c3f-5b57ccf49229"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Diagnose Sonstiges",
+                        "labelWidth": 150,
+                        "name": "DiagnoseSonstiges",
+                        "readOnly": true,
+                        "width": 350
+                    },
+                    "name": "MyTextField8",
+                    "designerId": "6009b488-4887-4a4b-88fd-ab2f1c14159e"
+                },
+                {
+                    "type": "Ext.form.field.Number",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Helfer Nr1",
+                        "labelWidth": 150,
+                        "name": "HelferNr1",
+                        "readOnly": true,
+                        "width": 350
+                    },
+                    "name": "MyNumberField1",
+                    "designerId": "27c52c2f-eef0-4e66-966c-17aff8e53c29"
+                },
+                {
+                    "type": "Ext.form.field.Number",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Helfer Nr2",
+                        "labelWidth": 150,
+                        "name": "HelferNr2",
+                        "readOnly": true,
+                        "width": 350
+                    },
+                    "name": "MyNumberField2",
+                    "designerId": "30bf71fe-b046-4de2-bcf6-927c1280a642"
+                },
+                {
+                    "type": "Ext.container.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "middle",
+                        "container|pack": "center",
+                        "designer|displayName": "buttons",
+                        "hidden": true,
+                        "layout": "hbox",
+                        "padding": 10
+                    },
+                    "name": "MyContainer1",
+                    "designerId": "a845fd54-aade-4094-a1a0-a3687c804897",
+                    "cn": [
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "formBind": true,
+                                "itemId": "saveButton",
+                                "layout|flex": 1,
+                                "margin": 5,
+                                "text": "Save"
+                            },
+                            "name": "MyButton2",
+                            "designerId": "958eceac-2355-49c9-abc6-3b0c99cced45",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onSave",
+                                        "implHandler": [
+                                            "var form = this.getReferences().form,",
+                                            "    values = form.getForm().getValues(),",
+                                            "    store = this.getStore('protokolls');",
+                                            "",
+                                            "// Valid",
+                                            "if (form.isValid()) {",
+                                            "",
+                                            "    // TODO: Assign the record's ID from data source",
+                                            "    // Normally, this value would be auto-generated,",
+                                            "    // or returned from the server",
+                                            "    values.id = store.count() + 1;",
+                                            "",
+                                            "    // Save record",
+                                            "    store.add(values);",
+                                            "",
+                                            "    // Commit changes",
+                                            "    store.commitChanges();",
+                                            "",
+                                            "    // Complete",
+                                            "    form.close();",
+                                            "",
+                                            "}"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "name": "onSave",
+                                    "designerId": "4fc44220-08a9-4c11-ad82-1350130d1138"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "cancelButton",
+                                "layout|flex": 1,
+                                "margin": 5,
+                                "text": "Cancel"
+                            },
+                            "name": "MyButton3",
+                            "designerId": "0aa1d7e5-82f5-4baf-b113-e50ca7d144c1",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onCancel",
+                                        "implHandler": [
+                                            "var form = this.getReferences().form;",
+                                            "form.close();"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "name": "onCancel",
+                                    "designerId": "b5dfce4f-78ac-4e17-861b-edf02e0de7df"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

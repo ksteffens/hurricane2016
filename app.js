@@ -43,7 +43,8 @@ Ext.application({
         'Protokoll',
         'Dateneingabe',
         'addPatient',
-        'PatietenListe'
+        'PatietenListe',
+        'showProtokoll'
     ],
     name: 'hurricane',
 
