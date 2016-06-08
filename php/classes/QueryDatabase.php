@@ -53,7 +53,7 @@ class QueryDatabase
 
         error_log(123456);
         error_log(print_r($params, 1));
-        $sql = "UPDATE `hurricane2016`.`Patient` SET
+        $sql = "UPDATE `hurricane2016`.`patient` SET
         `Name` = '$params->Name',
         `Vorname` = '$params->Vorname',
         `Geburtsdatum` = '$params->Geburtsdatum',
@@ -70,7 +70,7 @@ class QueryDatabase
     public function createPatient($params) {
         $_db = $this->_db;
         error_log(print_r($params, 1));
-        $sql = "INSERT INTO Patient (Name, Vorname, Geburtsdatum, Strasse, PLZ, Ort, GeschlechtID) 
+        $sql = "INSERT INTO patient (Name, Vorname, Geburtsdatum, Strasse, PLZ, Ort, GeschlechtID) 
                 VALUES ('$params->Name', '$params->Vorname', '$params->Geburtsdatum', '$params->Strasse', '$params->PLZ', '$params->Ort', '$params->GeschlechtID');";
         $_result = $_db->query($sql) or
         die('Connection Error: ' . $_db->connect_error);

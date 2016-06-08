@@ -33,7 +33,7 @@ class GenderQuery
         $_db = $this->_db;
 
         $sql = "SELECT GeschlechtID, Beschreibung
-                FROM Geschlecht";
+                FROM geschlecht";
 
         $_result = $_db->query($sql)or
         die('Connection Error: ' . $_db->connect_error);		

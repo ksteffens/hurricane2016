@@ -31,7 +31,7 @@ class ProtokollQuery
     public function readProtokoll($params) {
         $_db = $this->_db;
 
-        $_result = $_db->query("SELECT * FROM `Protokoll`") or
+        $_result = $_db->query("SELECT * FROM `protokoll`") or
         die('Connection Error: ' . $_db->connect_error);
         $results = array();
 
@@ -49,7 +49,7 @@ class ProtokollQuery
 error_log(print_r($params, 1));
         $_db = $this->_db;
 
-        $sql = "INSERT INTO Protokoll (PatientenID, EingangsDatum, PatientenNummer, AufnahmeZeit, AufnahmeID, AufnahmeKTW, AbgangZeit, AbgangID, AbgangUebergabe, AbgangZiel, DiagnoseID, DiagnoseSonstiges, HelferNr1, HelferNr2) 
+        $sql = "INSERT INTO protokoll (PatientenID, EingangsDatum, PatientenNummer, AufnahmeZeit, AufnahmeID, AufnahmeKTW, AbgangZeit, AbgangID, AbgangUebergabe, AbgangZiel, DiagnoseID, DiagnoseSonstiges, HelferNr1, HelferNr2) 
                 VALUES ($params->PatientenID, '$params->EingangsDatum', '$params->PatientenNummer', '$params->AufnahmeZeit', '$params->AufnahmeID', '$params->AufnahmeKTW', '$params->AbgangZeit', '$params->AbgangID', '$params->AbgangUebergabe', '$params->AbgangZiel', '$params->DiagnoseID', '$params->DiagnoseSonstiges', '$params->HelferNr1', '$params->HelferNr2' );";
 
 
@@ -69,7 +69,7 @@ error_log(print_r($params, 1));
         error_log(print_r($params, 1));
         $_db = $this->_db;
 
-        $_result = $_db->query("SELECT * FROM `Protokoll`") or
+        $_result = $_db->query("SELECT * FROM `protokoll`") or
         die('Connection Error: ' . $_db->connect_error);
         $results = array();
 
@@ -87,7 +87,7 @@ error_log(print_r($params, 1));
         error_log(print_r($params, 1));
         $_db = $this->_db;
 
-        $_result = $_db->query("SELECT * FROM `Protokoll`") or
+        $_result = $_db->query("SELECT * FROM `protokoll`") or
         die('Connection Error: ' . $_db->connect_error);
         $results = array();
 

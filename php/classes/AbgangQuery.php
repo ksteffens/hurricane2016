@@ -29,7 +29,7 @@ class AbgangQuery
     public function getAbgang($params) {
         $_db = $this->_db;
 
-        $_result = $_db->query("SELECT * FROM `Abgang`") or
+        $_result = $_db->query("SELECT * FROM `abgang`") or
         die('Connection Error: ' . $_db->connect_error);
         $results = array();
 
