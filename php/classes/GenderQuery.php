@@ -21,9 +21,9 @@ class GenderQuery
 		error_log($_db->error);
 		error_log(print_r($_db, 1));
 
-        if ($_db->connect_error) {
-            die('Connection Error: ' . $_db->connect_error);
-        }
+//        if ($_db->connect_error) {
+//            die('Connection Error: ' . $_db->connect_error);
+//        }
 
         $_db->set_charset("utf8");
         
