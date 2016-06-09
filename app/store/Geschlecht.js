@@ -19,6 +19,7 @@ Ext.define('hurricane.store.Geschlecht', {
     requires: [
         'hurricane.model.Geschlecht',
         'Ext.data.proxy.Direct',
+        'hurricane.DirectAPI',
         'Ext.data.reader.Json'
     ],
 

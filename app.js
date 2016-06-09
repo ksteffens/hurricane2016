@@ -44,12 +44,13 @@ Ext.application({
         'Dateneingabe',
         'addPatient',
         'PatietenListe',
-        'showProtokoll'
+        'showProtokoll',
+        'Start'
     ],
     name: 'hurricane',
 
     launch: function() {
-        Ext.create('hurricane.view.Home');
+        Ext.create('hurricane.view.Start', {renderTo: Ext.getBody()});
         Ext.direct.Manager.addProvider(Ext.hurricaneApi);
     }
 

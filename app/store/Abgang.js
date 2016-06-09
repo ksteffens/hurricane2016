@@ -19,6 +19,7 @@ Ext.define('hurricane.store.Abgang', {
     requires: [
         'hurricane.model.Abgang',
         'Ext.data.proxy.Direct',
+        'hurricane.DirectAPI',
         'Ext.data.reader.Json'
     ],
 

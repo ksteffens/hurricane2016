@@ -31,7 +31,8 @@
             "Dateneingabe",
             "addPatient",
             "PatietenListe",
-            "showProtokoll"
+            "showProtokoll",
+            "Start"
         ]
     },
     "name": "Application",

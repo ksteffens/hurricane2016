@@ -19,6 +19,7 @@ Ext.define('hurricane.store.Aufnahme', {
     requires: [
         'hurricane.model.Aufnahme',
         'Ext.data.proxy.Direct',
+        'hurricane.DirectAPI',
         'Ext.data.reader.Json'
     ],
 

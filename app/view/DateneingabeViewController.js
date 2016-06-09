@@ -21,6 +21,7 @@ Ext.define('hurricane.view.DateneingabeViewController', {
         var form         = Ext.getCmp('frmAddPatient').getForm(),
             form2        = Ext.getCmp('frmInputProtokoll').getForm(),
             newRecord    = Ext.create('hurricane.model.Patient'),
+            newRecord2    = Ext.create('hurricane.model.Protokoll'),
             store        = Ext.getStore('Patient'),
             store2		 = Ext.getStore('Protokoll');
         if (form.isValid() && form2.isValid()){
@@ -39,7 +40,7 @@ Ext.define('hurricane.view.DateneingabeViewController', {
                 form.reset();
                 form.loadRecord(newRecord);
                 form2.reset();
-                form2.loadRecord(newRecord);
+                form2.loadRecord(newRecord2);
             }, 500);
 
 

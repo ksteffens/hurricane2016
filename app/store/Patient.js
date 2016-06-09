@@ -19,6 +19,7 @@ Ext.define('hurricane.store.Patient', {
     requires: [
         'hurricane.model.Patient',
         'Ext.data.proxy.Direct',
+        'hurricane.DirectAPI',
         'Ext.data.reader.Json',
         'Ext.data.writer.Json'
     ],
