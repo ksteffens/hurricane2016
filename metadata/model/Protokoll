@@ -46,7 +46,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "dateFormat": "d.m.Y",
+                "dateFormat": null,
                 "dateWriteFormat": "Y-m-d",
                 "name": "EingangsDatum"
             },
@@ -76,8 +76,8 @@
             },
             "codeClass": null,
             "userConfig": {
-                "dateFormat": "H:i",
-                "dateWriteFormat": "H:i:s",
+                "dateFormat": "H:i:s",
+                "dateWriteFormat": null,
                 "name": "AufnahmeZeit"
             },
             "name": "MyDate2",
@@ -117,8 +117,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "dateFormat": "H:i",
-                "dateWriteFormat": "H:i:s",
+                "dateFormat": "H:i:s",
                 "name": "AbgangZeit"
             },
             "name": "MyDate3",

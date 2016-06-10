@@ -41,7 +41,7 @@ class ProtokollQuery
         }
 
         $this->_db->close();
-        error_log(print_r($results, 1));
+        //error_log(print_r($results, 1));
         return $results;
     }
 

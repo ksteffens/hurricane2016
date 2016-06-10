@@ -30,6 +30,7 @@
                 "frameHeader": false,
                 "header": false,
                 "height": null,
+                "id": null,
                 "itemId": "myform2",
                 "reference": "form",
                 "title": "My Form"
@@ -78,6 +79,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "fieldLabel": "Eingangs Datum",
+                        "format": "d.m.Y",
                         "labelWidth": 150,
                         "name": "EingangsDatum",
                         "readOnly": true,
@@ -112,6 +114,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "fieldLabel": "Aufnahme Zeit",
+                        "format": "H:i",
                         "labelWidth": 150,
                         "name": "AufnahmeZeit",
                         "readOnly": true,
@@ -146,10 +149,12 @@
                     "codeClass": null,
                     "userConfig": {
                         "fieldLabel": "Aufnahme Ktw",
+                        "hidden": true,
                         "labelWidth": 150,
                         "name": "AufnahmeKTW",
+                        "padding": "0 0 0 10",
                         "readOnly": true,
-                        "width": 350
+                        "width": 340
                     },
                     "name": "MyTextField5",
                     "designerId": "c188aaba-33cd-43ab-8911-fab95752c36c"
@@ -163,6 +168,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "fieldLabel": "Abgang Zeit",
+                        "format": "H:i",
                         "labelWidth": 150,
                         "name": "AbgangZeit",
                         "readOnly": true,
@@ -197,10 +203,12 @@
                     "codeClass": null,
                     "userConfig": {
                         "fieldLabel": "Abgang Uebergabe",
+                        "hidden": true,
                         "labelWidth": 150,
                         "name": "AbgangUebergabe",
+                        "padding": "0 0 0 10",
                         "readOnly": true,
-                        "width": 350
+                        "width": 340
                     },
                     "name": "MyTextField6",
                     "designerId": "1c091235-7630-4fe2-8f4e-15091daffda1"
@@ -214,10 +222,12 @@
                     "codeClass": null,
                     "userConfig": {
                         "fieldLabel": "Abgang Ziel",
+                        "hidden": true,
                         "labelWidth": 150,
                         "name": "AbgangZiel",
+                        "padding": "0 0 0 10",
                         "readOnly": true,
-                        "width": 350
+                        "width": 340
                     },
                     "name": "MyTextField7",
                     "designerId": "b54bce59-f5bb-4745-8ade-66bbd21904a7"
@@ -248,10 +258,12 @@
                     "codeClass": null,
                     "userConfig": {
                         "fieldLabel": "Diagnose Sonstiges",
+                        "hidden": true,
                         "labelWidth": 150,
                         "name": "DiagnoseSonstiges",
+                        "padding": "0 0 0 10 ",
                         "readOnly": true,
-                        "width": 350
+                        "width": 340
                     },
                     "name": "MyTextField8",
                     "designerId": "6009b488-4887-4a4b-88fd-ab2f1c14159e"
@@ -406,6 +418,44 @@
                     ]
                 }
             ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onPanelAfterRender",
+                "implHandler": [
+                    "var form = component.items.items[0];",
+                    "form.getForm().loadRecord(component.record);",
+                    "var record = component.record.data;",
+                    "form.getForm().findField('AufnahmeID').setValue(Ext.getStore('Aufnahme').findRecord('AufnahmeID', record.AufnahmeID).data.Beschreibung);",
+                    "form.getForm().findField('AbgangID').setValue(Ext.getStore('Abgang').findRecord('AbgangID', record.AbgangID).data.Beschreibung);",
+                    "form.getForm().findField('DiagnoseID').setValue(Ext.getStore('Diagnose').findRecord('DiagnoseID', record.DiagnoseID).data.Stichwort);",
+                    "",
+                    "",
+                    "if (record.AufnahmeID == 9 ) {",
+                    "    form.getForm().findField(\"AufnahmeKTW\").show();",
+                    "}",
+                    "",
+                    "if (record.AbgangID == 3) {",
+                    "    form.getForm().findField(\"AbgangUebergabe\").show();",
+                    "    form.getForm().findField(\"AbgangZiel\").show();",
+                    "}",
+                    "",
+                    "if (record.DiagnoseID == 5 || record.DiagnoseID == 12 || record.DiagnoseID == 28) {",
+                    "    form.getForm().findField(\"DiagnoseSonstiges\").show();",
+                    "}",
+                    ""
+                ],
+                "name": "afterrender",
+                "scope": "me"
+            },
+            "name": "onPanelAfterRender",
+            "designerId": "798b3b0f-cbd3-4f05-a15d-9cc21749211a"
         }
     ]
 }

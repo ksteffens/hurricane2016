@@ -7,10 +7,11 @@
     "codeClass": null,
     "userConfig": {
         "activeTab": 0,
-        "designer|initialView": true,
         "designer|userAlias": "start",
         "designer|userClassName": "Start",
+        "dock": null,
         "height": null,
+        "manageHeight": false,
         "width": null
     },
     "name": "MyTabPanel1",
@@ -26,6 +27,8 @@
             },
             "codeClass": null,
             "userConfig": {
+                "layout": "fit",
+                "manageHeight": false,
                 "title": "Home"
             },
             "name": "MyPanel1",
@@ -49,8 +52,10 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "container|align": "center",
                         "frameHeader": false,
                         "header": false,
+                        "layout": "vbox",
                         "manageHeight": false,
                         "title": "My Panel"
                     },
@@ -65,7 +70,12 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "alt": "DRK",
+                                "dock": null,
                                 "height": null,
+                                "layout|flex": null,
+                                "maxWidth": 300,
+                                "padding": "50 0 0 0",
                                 "src": "resources/img/drk.png",
                                 "width": null
                             },
@@ -80,7 +90,12 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "height": 500,
+                                "alt": "Hurricane",
+                                "height": 300,
+                                "layout|flex": null,
+                                "margin": "50  0 0 0",
+                                "maxWidth": null,
+                                "padding": "",
                                 "src": "resources/img/hu-website-vorschau.jpg",
                                 "width": null
                             },
@@ -99,6 +114,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "layout": "fit",
                 "manageHeight": false,
                 "title": "Dateneingabe"
             },
@@ -122,7 +138,14 @@
                         "type": "array"
                     },
                     "codeClass": null,
-                    "name": "dateneingabe1",
+                    "userConfig": {
+                        "container|align": "middle",
+                        "container|pack": "center",
+                        "dock": null,
+                        "height": null,
+                        "layout": "vbox"
+                    },
+                    "name": "dateneingabe",
                     "designerId": "fed89bde-0ef2-42a9-a265-aafdf5370a03",
                     "masterInstanceId": "e45445e9-748a-4cf9-892f-e7ccb80d736f"
                 }

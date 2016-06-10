@@ -19,8 +19,8 @@ Ext.define('hurricane.view.Home', {
 
     requires: [
         'hurricane.view.HomeViewModel',
-        'hurricane.view.Dateneingabe',
-        'Ext.panel.Panel'
+        'hurricane.view.Start',
+        'Ext.tab.Panel'
     ],
 
     viewModel: {
@@ -30,8 +30,7 @@ Ext.define('hurricane.view.Home', {
 
     items: [
         {
-            xtype: 'dateneingabe',
-            layout: 'fit'
+            xtype: 'start'
         }
     ]
 

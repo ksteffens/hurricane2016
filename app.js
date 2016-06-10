@@ -50,7 +50,7 @@ Ext.application({
     name: 'hurricane',
 
     launch: function() {
-        Ext.create('hurricane.view.Start', {renderTo: Ext.getBody()});
+        Ext.create('hurricane.view.Home');
         Ext.direct.Manager.addProvider(Ext.hurricaneApi);
     }
 

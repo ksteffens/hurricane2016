@@ -35,7 +35,6 @@ Ext.define('hurricane.model.Protokoll', {
         {
             type: 'date',
             name: 'EingangsDatum',
-            dateFormat: 'd.m.Y',
             dateWriteFormat: 'Y-m-d'
         },
         {
@@ -47,8 +46,7 @@ Ext.define('hurricane.model.Protokoll', {
         {
             type: 'date',
             name: 'AufnahmeZeit',
-            dateFormat: 'H:i',
-            dateWriteFormat: 'H:i:s'
+            dateFormat: 'H:i:s'
         },
         {
             type: 'int',
@@ -61,8 +59,7 @@ Ext.define('hurricane.model.Protokoll', {
         {
             type: 'date',
             name: 'AbgangZeit',
-            dateFormat: 'H:i',
-            dateWriteFormat: 'H:i:s'
+            dateFormat: 'H:i:s'
         },
         {
             type: 'int',

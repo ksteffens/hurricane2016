@@ -6,6 +6,7 @@
     },
     "codeClass": null,
     "userConfig": {
+        "designer|initialView": true,
         "designer|userAlias": "home",
         "designer|userClassName": "Home",
         "layout": "fit"
@@ -22,12 +23,9 @@
                 "type": "array"
             },
             "codeClass": null,
-            "userConfig": {
-                "layout": "fit"
-            },
-            "name": "dateneingabe",
-            "designerId": "01b0485b-a7d8-4390-ac35-e096900625d5",
-            "masterInstanceId": "e45445e9-748a-4cf9-892f-e7ccb80d736f"
+            "name": "start",
+            "designerId": "8e029b2a-7b77-4c08-a3c3-689cf2d1892e",
+            "masterInstanceId": "ae0a39da-2530-4db1-8ecf-2d981624ef37"
         }
     ]
 }

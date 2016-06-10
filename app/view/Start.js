@@ -28,11 +28,14 @@ Ext.define('hurricane.view.Start', {
     viewModel: {
         type: 'start'
     },
+    manageHeight: false,
     activeTab: 0,
 
     items: [
         {
             xtype: 'panel',
+            layout: 'fit',
+            manageHeight: false,
             title: 'Home',
             items: [
                 {
@@ -41,14 +44,24 @@ Ext.define('hurricane.view.Start', {
                     header: false,
                     manageHeight: false,
                     title: 'My Panel',
+                    layout: {
+                        type: 'vbox',
+                        align: 'center'
+                    },
                     items: [
                         {
                             xtype: 'image',
+                            maxWidth: 300,
+                            padding: '50 0 0 0',
+                            alt: 'DRK',
                             src: 'resources/img/drk.png'
                         },
                         {
                             xtype: 'image',
-                            height: 500,
+                            height: 300,
+                            margin: '50  0 0 0',
+                            padding: '',
+                            alt: 'Hurricane',
                             src: 'resources/img/hu-website-vorschau.jpg'
                         }
                     ]
@@ -57,11 +70,17 @@ Ext.define('hurricane.view.Start', {
         },
         {
             xtype: 'panel',
+            layout: 'fit',
             manageHeight: false,
             title: 'Dateneingabe',
             items: [
                 {
-                    xtype: 'dateneingabe'
+                    xtype: 'dateneingabe',
+                    layout: {
+                        type: 'vbox',
+                        align: 'middle',
+                        pack: 'center'
+                    }
                 }
             ]
         },

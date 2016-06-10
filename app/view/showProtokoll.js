@@ -36,6 +36,7 @@ Ext.define('hurricane.view.showProtokoll', {
     frameHeader: false,
     header: false,
     title: 'My Panel',
+    defaultListenerScope: true,
 
     items: [
         {
@@ -67,7 +68,8 @@ Ext.define('hurricane.view.showProtokoll', {
                     fieldLabel: 'Eingangs Datum',
                     labelWidth: 150,
                     name: 'EingangsDatum',
-                    readOnly: true
+                    readOnly: true,
+                    format: 'd.m.Y'
                 },
                 {
                     xtype: 'numberfield',
@@ -83,7 +85,8 @@ Ext.define('hurricane.view.showProtokoll', {
                     fieldLabel: 'Aufnahme Zeit',
                     labelWidth: 150,
                     name: 'AufnahmeZeit',
-                    readOnly: true
+                    readOnly: true,
+                    format: 'H:i'
                 },
                 {
                     xtype: 'combobox',
@@ -95,7 +98,9 @@ Ext.define('hurricane.view.showProtokoll', {
                 },
                 {
                     xtype: 'textfield',
-                    width: 350,
+                    hidden: true,
+                    padding: '0 0 0 10',
+                    width: 340,
                     fieldLabel: 'Aufnahme Ktw',
                     labelWidth: 150,
                     name: 'AufnahmeKTW',
@@ -107,7 +112,8 @@ Ext.define('hurricane.view.showProtokoll', {
                     fieldLabel: 'Abgang Zeit',
                     labelWidth: 150,
                     name: 'AbgangZeit',
-                    readOnly: true
+                    readOnly: true,
+                    format: 'H:i'
                 },
                 {
                     xtype: 'combobox',
@@ -119,7 +125,9 @@ Ext.define('hurricane.view.showProtokoll', {
                 },
                 {
                     xtype: 'textfield',
-                    width: 350,
+                    hidden: true,
+                    padding: '0 0 0 10',
+                    width: 340,
                     fieldLabel: 'Abgang Uebergabe',
                     labelWidth: 150,
                     name: 'AbgangUebergabe',
@@ -127,7 +135,9 @@ Ext.define('hurricane.view.showProtokoll', {
                 },
                 {
                     xtype: 'textfield',
-                    width: 350,
+                    hidden: true,
+                    padding: '0 0 0 10',
+                    width: 340,
                     fieldLabel: 'Abgang Ziel',
                     labelWidth: 150,
                     name: 'AbgangZiel',
@@ -143,7 +153,9 @@ Ext.define('hurricane.view.showProtokoll', {
                 },
                 {
                     xtype: 'textfield',
-                    width: 350,
+                    hidden: true,
+                    padding: '0 0 0 10 ',
+                    width: 340,
                     fieldLabel: 'Diagnose Sonstiges',
                     labelWidth: 150,
                     name: 'DiagnoseSonstiges',
@@ -183,7 +195,10 @@ Ext.define('hurricane.view.showProtokoll', {
                             margin: 5,
                             text: 'Save',
                             listeners: {
-                                click: 'onSave'
+                                click: {
+                                    fn: 'onSave',
+                                    scope: 'controller'
+                                }
                             }
                         },
                         {
@@ -193,13 +208,43 @@ Ext.define('hurricane.view.showProtokoll', {
                             margin: 5,
                             text: 'Cancel',
                             listeners: {
-                                click: 'onCancel'
+                                click: {
+                                    fn: 'onCancel',
+                                    scope: 'controller'
+                                }
                             }
                         }
                     ]
                 }
             ]
         }
-    ]
+    ],
+    listeners: {
+        afterrender: 'onPanelAfterRender'
+    },
+
+    onPanelAfterRender: function(component, eOpts) {
+        var form = component.items.items[0];
+        form.getForm().loadRecord(component.record);
+        var record = component.record.data;
+        form.getForm().findField('AufnahmeID').setValue(Ext.getStore('Aufnahme').findRecord('AufnahmeID', record.AufnahmeID).data.Beschreibung);
+        form.getForm().findField('AbgangID').setValue(Ext.getStore('Abgang').findRecord('AbgangID', record.AbgangID).data.Beschreibung);
+        form.getForm().findField('DiagnoseID').setValue(Ext.getStore('Diagnose').findRecord('DiagnoseID', record.DiagnoseID).data.Stichwort);
+
+
+        if (record.AufnahmeID == 9 ) {
+            form.getForm().findField("AufnahmeKTW").show();
+        }
+
+        if (record.AbgangID == 3) {
+            form.getForm().findField("AbgangUebergabe").show();
+            form.getForm().findField("AbgangZiel").show();
+        }
+
+        if (record.DiagnoseID == 5 || record.DiagnoseID == 12 || record.DiagnoseID == 28) {
+            form.getForm().findField("DiagnoseSonstiges").show();
+        }
+
+    }
 
 });

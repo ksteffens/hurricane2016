@@ -166,7 +166,24 @@ Ext.define('hurricane.view.EditPatient', {
     onWindowAfterRender: function(component, eOpts) {
         Ext.getCmp('frmEditPatient').loadRecord(component.record);
         var combo = Ext.getCmp('frmFldGeschlecht');
+        var arr = [];
+        var store = Ext.getStore('Protokoll').load({
+            callback : function(records, options, success) {
+                if (success) {
+                    store.each(function(record){
+                        if (record.data. PatientenID === component.record.data.patientID) {
+                            Ext.getCmp('patientenPanel').add(Ext.create('hurricane.view.showProtokoll', {
+                                record: record,
+                                title: record.data.PatientenNummer
+                            }));
+                        }
+                    });
+                }
+            }
+        });
+
         combo.setValue(component.record.data.GeschlechtID);
+
     }
 
 });
