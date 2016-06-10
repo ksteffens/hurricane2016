@@ -1,2 +1,2 @@
 // @tag full-page
-// @require /Users/ksteffens/server/apache/mail.test/app.js
+// @require /Volumes/EigenDaten/ksteffens/Git/hurricane2016/app.js
