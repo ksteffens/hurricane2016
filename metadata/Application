@@ -12,7 +12,9 @@
             "Diagnose",
             "Aufnahme",
             "Abgang",
-            "Protokoll"
+            "Protokoll",
+            "StatistikAufnamhe",
+            "StatistikDiagnose"
         ],
         "name": "hurricane",
         "stores": [
@@ -21,7 +23,11 @@
             "Diagnose",
             "Abgang",
             "Aufnahme",
-            "Protokoll"
+            "Protokoll",
+            "StatistikAufnahme",
+            "StatistikDiagnose",
+            "StatistikAbgang",
+            "StatistikGeschlecht"
         ],
         "views": [
             "Home",
@@ -32,7 +38,8 @@
             "addPatient",
             "PatietenListe",
             "showProtokoll",
-            "Start"
+            "Start",
+            "Statistik"
         ]
     },
     "name": "Application",

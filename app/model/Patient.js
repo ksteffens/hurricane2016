@@ -30,7 +30,8 @@ Ext.define('hurricane.model.Patient', {
         },
         {
             type: 'string',
-            name: 'Name'
+            name: 'Name',
+            sortType: 'asUCString'
         },
         {
             type: 'string',

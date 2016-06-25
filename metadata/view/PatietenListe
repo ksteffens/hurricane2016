@@ -31,6 +31,7 @@
             "codeClass": null,
             "userConfig": {
                 "dock": null,
+                "hideHeaders": true,
                 "layout|flex": 1,
                 "manageHeight": false,
                 "scrollable": null,
@@ -59,6 +60,19 @@
                     },
                     "name": "MyTable1",
                     "designerId": "0b24bfee-e16e-4839-9d21-796f120ec762"
+                },
+                {
+                    "type": "Ext.grid.column.RowNumberer",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "width": 50
+                    },
+                    "name": "MyRowNumberer",
+                    "designerId": "e8229a1c-c29e-4a91-a7b4-a1f6f6772638"
                 },
                 {
                     "type": "Ext.grid.column.Number",

@@ -1,0 +1,43 @@
+{
+    "type": "directstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "designer|userClassName": "StatistikAufnahme",
+        "model": "StatistikAufnamhe",
+        "storeId": "StatistikAufnahme"
+    },
+    "name": "MyDirectStore",
+    "designerId": "8cd1f326-22ed-436f-a344-28ee5df45503",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Direct",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "directFn": "StatistikQuery.getAufnahme"
+            },
+            "name": "MyDirectProxy5",
+            "designerId": "fba2c34a-db80-4c6f-9b37-a2d1a51ff11e",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyJsonReader5",
+                    "designerId": "36189357-db12-4280-8d2c-95ae474306b1"
+                }
+            ]
+        }
+    ]
+}

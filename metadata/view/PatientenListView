@@ -11,10 +11,15 @@
         "dock": "top",
         "frameHeader": false,
         "header": false,
+        "layout": "fit",
+        "scrollable": true,
         "title": "My Panel",
         "width": null
     },
     "name": "MyPanel",
+    "configAlternates": {
+        "scrollable": "boolean"
+    },
     "designerId": "cddcf432-8803-4cc2-8df0-504c9e4d8802",
     "viewControllerInstanceId": "1e10902b-08f6-4c55-81e3-c04dc5280045",
     "viewModelInstanceId": "cdf83a12-a145-46c9-8299-f5cd2f0cd4c6",
@@ -27,15 +32,21 @@
             },
             "codeClass": null,
             "userConfig": {
+                "dock": null,
                 "forceFit": true,
-                "height": 250,
+                "height": null,
                 "id": "grdPatientenListe",
+                "manageHeight": false,
                 "reference": "list",
+                "scrollable": true,
                 "store": "Patient",
                 "title": "Patienten Liste",
                 "width": null
             },
             "name": "MyGridPanel",
+            "configAlternates": {
+                "scrollable": "boolean"
+            },
             "designerId": "3ca88e31-72e1-416d-a67d-5f82dfe0e79c",
             "cn": [
                 {
@@ -214,6 +225,16 @@
                     },
                     "name": "onGridpanelItemDblClick",
                     "designerId": "e84e118c-fff5-41f0-aa3a-c545c957ef65"
+                },
+                {
+                    "type": "Ext.grid.filters.Filters",
+                    "reference": {
+                        "name": "plugins",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "name": "MyGridFiltersPlugin",
+                    "designerId": "2d452a69-c09a-4bb4-a7dc-c4ac46722982"
                 }
             ]
         }

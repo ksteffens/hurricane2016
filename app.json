@@ -13,7 +13,8 @@
    "theme": "theme-crisp-2bf31ae8-211e-4f10-9ca1-4ca4e1b2104c",
    "requires": [
       "font-awesome",
-      "ext-locale"
+      "ext-locale",
+      "sencha-charts"
    ],
    "locale": "de",
    "fashion": {

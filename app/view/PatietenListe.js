@@ -22,6 +22,7 @@ Ext.define('hurricane.view.PatietenListe', {
         'hurricane.view.PatietenListeViewController',
         'Ext.grid.Panel',
         'Ext.view.Table',
+        'Ext.grid.column.RowNumberer',
         'Ext.grid.column.Number',
         'Ext.grid.column.Template',
         'Ext.XTemplate'
@@ -47,6 +48,7 @@ Ext.define('hurricane.view.PatietenListe', {
             manageHeight: false,
             title: 'Patienten Liste',
             syncRowHeight: false,
+            hideHeaders: true,
             store: 'Patient',
             viewConfig: {
                 border: 1,
@@ -54,6 +56,10 @@ Ext.define('hurricane.view.PatietenListe', {
                 width: 250
             },
             columns: [
+                {
+                    xtype: 'rownumberer',
+                    width: 50
+                },
                 {
                     xtype: 'numbercolumn',
                     hidden: true,

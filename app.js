@@ -26,7 +26,9 @@ Ext.application({
         'Diagnose',
         'Aufnahme',
         'Abgang',
-        'Protokoll'
+        'Protokoll',
+        'StatistikAufnamhe',
+        'StatistikDiagnose'
     ],
     stores: [
         'Patient',
@@ -34,7 +36,11 @@ Ext.application({
         'Diagnose',
         'Abgang',
         'Aufnahme',
-        'Protokoll'
+        'Protokoll',
+        'StatistikAufnahme',
+        'StatistikDiagnose',
+        'StatistikAbgang',
+        'StatistikGeschlecht'
     ],
     views: [
         'Home',
@@ -45,7 +51,8 @@ Ext.application({
         'addPatient',
         'PatietenListe',
         'showProtokoll',
-        'Start'
+        'Start',
+        'Statistik'
     ],
     name: 'hurricane',
 

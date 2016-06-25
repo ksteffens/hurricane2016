@@ -53,6 +53,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "container|align": "center",
+                        "container|pack": "center",
                         "frameHeader": false,
                         "header": false,
                         "layout": "vbox",
@@ -70,7 +71,6 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "alt": "DRK",
                                 "dock": null,
                                 "height": null,
                                 "layout|flex": null,
@@ -90,7 +90,6 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "alt": "Hurricane",
                                 "height": 300,
                                 "layout|flex": null,
                                 "margin": "50  0 0 0",
@@ -159,6 +158,8 @@
             },
             "codeClass": null,
             "userConfig": {
+                "container|align": "stretch",
+                "layout": "vbox",
                 "title": "Suche"
             },
             "name": "MyPanel3",
@@ -173,6 +174,59 @@
                     "codeClass": null,
                     "name": "TabConfig3",
                     "designerId": "ca98466f-b8f6-43e8-97a7-7a2ea66b422c"
+                },
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dock": null,
+                        "layout": "absolute",
+                        "layout|flex": 1
+                    },
+                    "name": "patientenlistview",
+                    "designerId": "356629d7-7036-4efb-bc8e-f22f8eb384db",
+                    "masterInstanceId": "cddcf432-8803-4cc2-8df0-504c9e4d8802"
+                }
+            ]
+        },
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout": "fit",
+                "title": "Statistik"
+            },
+            "name": "MyPanel8",
+            "designerId": "b8fe5109-661b-4f76-9876-cf3fa5c31597",
+            "cn": [
+                {
+                    "type": "Ext.tab.Tab",
+                    "reference": {
+                        "name": "tabConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "TabConfig7",
+                    "designerId": "17bdcd1d-183f-462e-a435-7192756899d4"
+                },
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "name": "statistik",
+                    "designerId": "547b8297-1bab-4b73-824e-ed43b0c0ecb3",
+                    "masterInstanceId": "1429c487-76b1-48d2-92cf-4b7d5305aea7"
                 }
             ]
         }

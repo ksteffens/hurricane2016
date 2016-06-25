@@ -1,0 +1,54 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "StatistikDiagnose"
+    },
+    "name": "StatistikAufnamhe1",
+    "designerId": "3e71461e-a396-4dfe-8d65-902b0d3ea76f",
+    "cn": [
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "DiagnoseID"
+            },
+            "name": "MyField2",
+            "designerId": "5ce41387-3bde-46ae-8d9f-2d0f8769785c"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Beschreibung"
+            },
+            "name": "MyField3",
+            "designerId": "a517dbe2-3244-42ea-b7a9-a571e1e2bb9f"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Anzahl"
+            },
+            "name": "MyField4",
+            "designerId": "a35cebd3-3510-41f6-9701-d3dca6375630"
+        }
+    ]
+}

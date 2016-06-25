@@ -33,7 +33,11 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "Name"
+                "name": "Name",
+                "sortType": [
+                    "",
+                    "asUCString"
+                ]
             },
             "name": "MyString",
             "designerId": "8ec2b1d0-9dc9-4a28-a2d5-d99aafe4d373"

@@ -22,7 +22,8 @@ Ext.define('hurricane.view.PatientenListView', {
         'hurricane.view.PatientenListViewViewController',
         'Ext.grid.Panel',
         'Ext.view.Table',
-        'Ext.grid.column.Date'
+        'Ext.grid.column.Date',
+        'Ext.grid.filters.Filters'
     ],
 
     controller: 'patientenlistview',
@@ -30,6 +31,8 @@ Ext.define('hurricane.view.PatientenListView', {
         type: 'patientenlistview'
     },
     dock: 'top',
+    scrollable: true,
+    layout: 'fit',
     frameHeader: false,
     header: false,
     title: 'My Panel',
@@ -38,8 +41,9 @@ Ext.define('hurricane.view.PatientenListView', {
         {
             xtype: 'gridpanel',
             reference: 'list',
-            height: 250,
             id: 'grdPatientenListe',
+            scrollable: true,
+            manageHeight: false,
             title: 'Patienten Liste',
             forceFit: true,
             store: 'Patient',
@@ -92,7 +96,12 @@ Ext.define('hurricane.view.PatientenListView', {
             listeners: {
                 select: 'select',
                 itemdblclick: 'onGridpanelItemDblClick'
-            }
+            },
+            plugins: [
+                {
+                    ptype: 'gridfilters'
+                }
+            ]
         }
     ]
 

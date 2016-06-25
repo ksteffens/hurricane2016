@@ -69,6 +69,22 @@ function get_extdirect_api()
                     'len' => 1
                 )
             )
+        ),
+        'StatistikQuery' => array(
+            'methods' => array(
+                'getAufnahme' => array(
+                    'len' => 1
+                ),
+                'getDiagnose' => array(
+                    'len' => 1
+                ),
+                'getAbgang' => array(
+                    'len' => 1
+                ),
+                'getGeschlecht' => array(
+                    'len' => 1
+                )
+            )
         )
     );
 

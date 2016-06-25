@@ -20,9 +20,11 @@ Ext.define('hurricane.view.Start', {
     requires: [
         'hurricane.view.StartViewModel',
         'hurricane.view.Dateneingabe',
-        'Ext.panel.Panel',
+        'hurricane.view.PatientenListView',
+        'hurricane.view.Statistik',
         'Ext.tab.Tab',
-        'Ext.Img'
+        'Ext.Img',
+        'Ext.tab.Panel'
     ],
 
     viewModel: {
@@ -46,14 +48,14 @@ Ext.define('hurricane.view.Start', {
                     title: 'My Panel',
                     layout: {
                         type: 'vbox',
-                        align: 'center'
+                        align: 'center',
+                        pack: 'center'
                     },
                     items: [
                         {
                             xtype: 'image',
                             maxWidth: 300,
                             padding: '50 0 0 0',
-                            alt: 'DRK',
                             src: 'resources/img/drk.png'
                         },
                         {
@@ -61,7 +63,6 @@ Ext.define('hurricane.view.Start', {
                             height: 300,
                             margin: '50  0 0 0',
                             padding: '',
-                            alt: 'Hurricane',
                             src: 'resources/img/hu-website-vorschau.jpg'
                         }
                     ]
@@ -86,7 +87,28 @@ Ext.define('hurricane.view.Start', {
         },
         {
             xtype: 'panel',
-            title: 'Suche'
+            title: 'Suche',
+            layout: {
+                type: 'vbox',
+                align: 'stretch'
+            },
+            items: [
+                {
+                    xtype: 'patientenlistview',
+                    layout: 'absolute',
+                    flex: 1
+                }
+            ]
+        },
+        {
+            xtype: 'panel',
+            layout: 'fit',
+            title: 'Statistik',
+            items: [
+                {
+                    xtype: 'statistik'
+                }
+            ]
         }
     ]
 

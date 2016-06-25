@@ -60,6 +60,20 @@
                     "designerId": "6117d224-d159-4e13-bfbe-8dacfd228ce6"
                 }
             ]
+        },
+        {
+            "type": "Ext.util.Sorter",
+            "reference": {
+                "name": "sorters",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": null,
+                "property": "Name"
+            },
+            "name": "MySorter",
+            "designerId": "cdcc88c7-68bb-4a48-8b63-76524432c2d9"
         }
     ]
 }

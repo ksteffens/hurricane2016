@@ -21,7 +21,8 @@ Ext.define('hurricane.store.Patient', {
         'Ext.data.proxy.Direct',
         'hurricane.DirectAPI',
         'Ext.data.reader.Json',
-        'Ext.data.writer.Json'
+        'Ext.data.writer.Json',
+        'Ext.util.Sorter'
     ],
 
     constructor: function(cfg) {
@@ -47,6 +48,9 @@ Ext.define('hurricane.store.Patient', {
                     type: 'json',
                     writeAllFields: true
                 }
+            },
+            sorters: {
+                property: 'Name'
             }
         }, cfg)]);
     }
