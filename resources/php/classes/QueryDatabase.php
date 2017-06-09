@@ -14,14 +14,14 @@ class QueryDatabase
     public $results;
 
     public function __construct() {
-        $this->_db = new mysqli('localhost', 'hurricane' ,'123456', 'hurricane2016');
+        $this->_db = new mysqli('localhost', 'hurricane' ,'123456', 'hurricane2017');
 
         $_db = $this->_db;
 		
 		error_log('QueryDatabase');
 
         if ($_db->connect_error) {
-            die('Connection Error: ' . $_db->connect_error);
+            die('Connection Error-QueryDatabase: ' . $_db->connect_error);
         }
 
         $_db->set_charset("utf8");
@@ -33,7 +33,7 @@ class QueryDatabase
         $_db = $this->_db;
 
         $_result = $_db->query("SELECT * FROM patient") or
-        die('Connection Error: ' . $_db->connect_error);
+        die('Connection Error QueryDatabase: ' . $_db->connect_error);
         $results = array();
 
         while ($row = $_result->fetch_assoc()) {
@@ -53,7 +53,7 @@ class QueryDatabase
 
         error_log(123456);
         error_log(print_r($params, 1));
-        $sql = "UPDATE `hurricane2016`.`patient` SET
+        $sql = "UPDATE `hurricane2017`.`patient` SET
         `Name` = '$params->Name',
         `Vorname` = '$params->Vorname',
         `Geburtsdatum` = '$params->Geburtsdatum',

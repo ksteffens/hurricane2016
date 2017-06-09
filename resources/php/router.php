@@ -7,8 +7,14 @@ class BogusAction {
     public $tid;
 }
 
+error_log('Test');
+
 $isForm = false;
 $isUpload = false;
+
+//error_log(print_r($HTTP_RAW_POST_DATA,1 ));
+//error_log(print_r($_POST['extAction'],1 ));
+
 
 if (isset($HTTP_RAW_POST_DATA)) {
     header('Content-Type: text/javascript');

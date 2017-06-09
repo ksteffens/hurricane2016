@@ -13,12 +13,12 @@ class AbgangQuery
     public $results;
 
     public function __construct() {
-        $this->_db = new mysqli('localhost', 'hurricane' ,'123456', 'hurricane2016');
+        $this->_db = new mysqli('localhost', 'hurricane' ,'123456', 'hurricane2017');
 
         $_db = $this->_db;
 
         if ($_db->connect_error) {
-            die('Connection Error: ' . $_db->connect_error);
+            die('Connection Error-AbgangQuery: ' . $_db->connect_error);
         }
 
         $_db->set_charset("utf8");
@@ -30,7 +30,7 @@ class AbgangQuery
         $_db = $this->_db;
 
         $_result = $_db->query("SELECT * FROM `abgang`") or
-        die('Connection Error: ' . $_db->connect_error);
+        die('Connection Error AbgangQuery: ' . $_db->connect_error);
         $results = array();
 
 

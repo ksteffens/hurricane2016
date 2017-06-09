@@ -18,9 +18,6 @@ Ext.define('hurricane.model.Patient', {
     alias: 'model.patient',
 
     requires: [
-        'Ext.data.field.Integer',
-        'Ext.data.field.String',
-        'Ext.data.field.Date'
     ],
 
     fields: [
@@ -58,6 +55,64 @@ Ext.define('hurricane.model.Patient', {
         {
             type: 'string',
             name: 'GeschlechtID'
+        },
+        {
+            type: 'date',
+            name: 'EingangsDatum',
+            dateWriteFormat: 'Y-m-d'
+        },
+        {
+            type: 'int',
+            allowNull: true,
+            name: 'PatientenNummer',
+            unique: true
+        },
+        {
+            type: 'date',
+            name: 'AufnahmeZeit',
+            dateFormat: 'H:i:s'
+        },
+        {
+            type: 'int',
+            name: 'AufnahmeID'
+        },
+        {
+            type: 'string',
+            name: 'AufnahmeKTW'
+        },
+        {
+            type: 'date',
+            name: 'AbgangZeit',
+            dateFormat: 'H:i:s'
+        },
+        {
+            type: 'int',
+            name: 'AbgangID'
+        },
+        {
+            type: 'string',
+            name: 'AbgangUebergabe'
+        },
+        {
+            name: 'AbgangZiel'
+        },
+        {
+            type: 'int',
+            name: 'DiagnoseID'
+        },
+        {
+            type: 'string',
+            name: 'DiagnoseSonstiges'
+        },
+        {
+            type: 'int',
+            allowNull: true,
+            name: 'HelferNr1'
+        },
+        {
+            type: 'int',
+            allowNull: true,
+            name: 'HelferNr2'
         }
     ]
 });

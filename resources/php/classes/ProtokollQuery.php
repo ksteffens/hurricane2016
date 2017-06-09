@@ -13,14 +13,14 @@ class ProtokollQuery
     public $results;
 
     public function __construct() {
-        $this->_db = new mysqli('localhost', 'hurricane' ,'123456', 'hurricane2016');
+        $this->_db = new mysqli('localhost', 'hurricane' ,'123456', 'hurricane2017');
 
         $_db = $this->_db;
 		
 		error_log('ProtokollQuery');
 
         if ($_db->connect_error) {
-            die('Connection Error: ' . $_db->connect_error);
+            die('Connection Error-ProtokollQuery: ' . $_db->connect_error);
         }
 
         $_db->set_charset("utf8");
@@ -32,7 +32,7 @@ class ProtokollQuery
         $_db = $this->_db;
 
         $_result = $_db->query("SELECT * FROM `protokoll`") or
-        die('Connection Error: ' . $_db->connect_error);
+        die('Connection Error ProtokollQuery: ' . $_db->connect_error);
         $results = array();
 
 

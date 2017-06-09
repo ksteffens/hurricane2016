@@ -13,26 +13,29 @@ class DiagnoseQuery
     public $results;
 
     public function __construct() {
-        $this->_db = new mysqli('localhost', 'hurricane' ,'123456', 'hurricane2016');
+        $this->_db = new mysqli('localhost', 'hurricane' ,'123456', 'hurricane2017');
 
         $_db = $this->_db;
 		
 		error_log('DiagnoseQuery');
 
         if ($_db->connect_error) {
-            die('Connection Error: ' . $_db->connect_error);
+            die('Connection Error-DiagnoseQuery: ' . $_db->connect_error);
         }
 
         $_db->set_charset("utf8");
-        
+
         return $_db;
     }
 
     public function getDiagnose($params) {
         $_db = $this->_db;
 
+        error_log('READ');
+
+
         $_result = $_db->query("SELECT * FROM `diagnoseschluessel`") or
-        die('Connection Error: ' . $_db->connect_error);
+        die('Connection Error DiagnoseQuery: ' . $_db->connect_error);
         $results = array();
 
 

@@ -63,8 +63,7 @@ Ext.define('hurricane.view.Statistik', {
                 },
                 {
                     xtype: 'polar',
-                    height: 200,
-                    manageHeight: false,
+                    minHeight: 100,
                     colors: [
                         '#115fa6',
                         '#94ae0a',
@@ -86,8 +85,8 @@ Ext.define('hurricane.view.Statistik', {
                                 contrast: true,
                                 font: '12px Arial'
                             },
-                            xField: 'Anzahl',
-                            yField: 'Beschreibung'
+                            xField: 'y',
+                            yField: 'Anzahl'
                         }
                     ],
                     interactions: [

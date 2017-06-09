@@ -6,6 +6,8 @@ header('Content-Type: text/javascript');
 $API = get_extdirect_api();
 $actions = array();
 
+error_log('API');
+
 foreach ($API as $aname=>&$a) {
     $methods = array();
     foreach ($a['methods'] as $mname=>&$m) {

@@ -21,9 +21,9 @@ Ext.define('hurricane.view.DateneingabeViewController', {
         var form         = Ext.getCmp('frmAddPatient').getForm(),
             form2        = Ext.getCmp('frmInputProtokoll').getForm(),
             newRecord    = Ext.create('hurricane.model.Patient'),
-            newRecord2    = Ext.create('hurricane.model.Protokoll'),
+            // newRecord2    = Ext.create('hurricane.model.Protokoll'),
             store        = Ext.getStore('Patient'),
-            store2		 = Ext.getStore('Protokoll'),
+            // store2		 = Ext.getStore('Protokoll'),
             valid		 = true;
 
         if (!form.isValid()) {
@@ -38,8 +38,6 @@ Ext.define('hurricane.view.DateneingabeViewController', {
         if (valid){
             form.updateRecord();
             var temp = store.add(form.getRecord());
-
-
 
             setTimeout(function(){
                 form2.findField('PatientenID').setValue(temp[0].data.patientID);

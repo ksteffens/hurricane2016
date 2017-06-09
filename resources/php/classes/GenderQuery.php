@@ -14,14 +14,14 @@ class GenderQuery
     public $results;
 
     public function __construct() {
-        $this->_db = new mysqli('localhost', 'hurricane' ,'123456', 'hurricane2016');
+        $this->_db = new mysqli('localhost', 'hurricane' ,'123456', 'hurricane2017');
 
         $_db = $this->_db;
 		
 		error_log('GenderQuery');
 
         if ($_db->connect_error) {
-            die('Connection Error: ' . $_db->connect_error);
+            die('Connection Error-GenderQuery: ' . $_db->connect_error);
         }
 
         $_db->set_charset("utf8");
@@ -36,7 +36,7 @@ class GenderQuery
                 FROM geschlecht";
 
         $_result = $_db->query($sql)or
-        die('Connection Error: ' . $_db->connect_error);		
+        die('Connection Error GenderQuery: ' . $_db->connect_error);
         $results = array();
 
         while ($row = $_result->fetch_assoc()) {

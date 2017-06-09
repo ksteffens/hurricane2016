@@ -13,14 +13,14 @@ class AufnahmeQuery
     public $results;
 
     public function __construct() {
-        $this->_db = new mysqli('localhost', 'hurricane' ,'123456', 'hurricane2016');
+        $this->_db = new mysqli('localhost', 'hurricane' ,'123456', 'hurricane2017');
 
         $_db = $this->_db;
 		
 		error_log('AufnahmeQuery');
 
         if ($_db->connect_error) {
-            die('Connection Error: ' . $_db->connect_error);
+            die('Connection Error-AufnahmeQuery: ' . $_db->connect_error);
         }
 
         $_db->set_charset("utf8");
@@ -32,7 +32,7 @@ class AufnahmeQuery
         $_db = $this->_db;
 
         $_result = $_db->query("SELECT * FROM `aufnahme`") or
-        die('Connection Error: ' . $_db->connect_error);
+        die('Connection Error AufnahmeQuery: ' . $_db->connect_error);
         $results = array();
 
 
