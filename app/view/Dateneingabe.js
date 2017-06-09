@@ -18,13 +18,14 @@ Ext.define('hurricane.view.Dateneingabe', {
     alias: 'widget.dateneingabe',
 
     requires: [
-        'hurricane.view.DateneingabeViewModel',
-        'hurricane.view.DateneingabeViewController',
-        'hurricane.view.PatietenListe',
-        'hurricane.view.addPatient',
-        'hurricane.view.Protokoll',
+        'Ext.button.Button',
+        'Ext.layout.container.Column',
         'Ext.panel.Panel',
-        'Ext.button.Button'
+        'hurricane.view.DateneingabeViewController',
+        'hurricane.view.DateneingabeViewModel',
+        'hurricane.view.PatietenListe',
+        'hurricane.view.Protokoll',
+        'hurricane.view.addPatient'
     ],
 
     controller: 'dateneingabe',
@@ -67,18 +68,14 @@ Ext.define('hurricane.view.Dateneingabe', {
                     flex: 0,
                     height: 438,
                     layout: {
-                        type: 'hbox',
+                        type: 'column',
                         pack: 'center'
                     },
                     items: [
                         {
+                            // columnWidth:0.5,
                             xtype: 'addpatient',
                             maxWidth: 300,
-                            flex: 1
-                        },
-                        {
-                            xtype: 'protokoll',
-                            layout: 'vbox',
                             flex: 1
                         }
                     ]

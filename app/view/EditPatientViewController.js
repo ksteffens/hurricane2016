@@ -46,6 +46,36 @@ Ext.define('hurricane.view.EditPatientViewController', {
     onCancel: function(button, e, eOpts) {
         var form = this.getReferences().form;
         Ext.getCmp('editPanel').close();
-    }
+    },
+
+    onComboboxChange2: function(field, newValue, oldValue, eOpts) {
+        var form =  Ext.getCmp('frmInputProtokoll');
+        if (newValue == 9 ) {
+            form.getForm().findField("AufnahmeKTW").show();
+        } else {
+            form.getForm().findField("AufnahmeKTW").hide();
+        }
+    },
+
+    onComboboxChange: function(field, newValue, oldValue, eOpts) {
+        var form =  Ext.getCmp('frmInputProtokoll');
+        if (form && newValue == 3) {
+            form.getForm().findField("AbgangUebergabe").show();
+            form.getForm().findField("AbgangZiel").show();
+        } else {
+            form.getForm().findField("AbgangUebergabe").hide();
+            form.getForm().findField("AbgangZiel").hide();
+        }
+    },
+
+    onComboboxChange1: function(field, newValue, oldValue, eOpts) {
+        var form =  Ext.getCmp('frmInputProtokoll');
+        if (newValue == 5 || newValue == 12 || newValue == 28) {
+            form.getForm().findField("DiagnoseSonstiges").show();
+        } else {
+            form.getForm().findField("DiagnoseSonstiges").hide();
+        }
+    },
+
 
 });
