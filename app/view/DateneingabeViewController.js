@@ -17,59 +17,39 @@ Ext.define('hurricane.view.DateneingabeViewController', {
     extend: 'Ext.app.ViewController',
     alias: 'controller.dateneingabe',
 
-    onButtonClick: function(button, e, eOpts) {
-        var form         = Ext.getCmp('frmAddPatient').getForm(),
-            // form2        = Ext.getCmp('frmInputProtokoll').getForm(),
-            newRecord    = Ext.create('hurricane.model.Patient'),
-            // newRecord2    = Ext.create('hurricane.model.Protokoll'),
-            store        = Ext.getStore('Patient'),
-            // store2		 = Ext.getStore('Protokoll'),
-            valid		 = true;
+    requires: [
+        'hurricane.model.Patient'
+    ],
+
+    onButtonClick: function (button, e, eOpts) {
+        var form = Ext.getCmp('frmAddPatient').getForm(),
+            newRecord = Ext.create('hurricane.model.Patient'),
+            store = Ext.getStore('Patient');
 
         debugger;
-        console.log(newRecord);
 
-        if (!form.isValid()) {
-            valid = false;
-        }
-
-        // if (!form2.isValid()) {
-        //     vaild = false;
-        // }
-
-        //if (form.isValid() && form2.isValid()){
-        if (valid){
+        if (form.isValid()) {
             form.updateRecord();
             var temp = store.add(form.getRecord());
+            console.log(temp);
 
-            setTimeout(function(){
-                // form2.findField('PatientenID').setValue(temp[0].data.patientID);
-                // form2.updateRecord();
-                // var temp2 = store2.add(form2.getRecord());
-
-
-                form.reset();
-                form.loadRecord(newRecord);
-                // form2.reset();
-                // form2.loadRecord(newRecord2);
-            }, 500);
-
+            form.reset();
+            form.loadRecord(newRecord);
 
         }
-
 
 
     },
 
-    onButtonClick1: function(button, e, eOpts) {
-        var form         = Ext.getCmp('frmAddPatient').getForm(),
-            newRecord    = Ext.create('hurricane.model.Patient');
+    onButtonClick1: function (button, e, eOpts) {
+        var form = Ext.getCmp('frmAddPatient').getForm(),
+            newRecord = Ext.create('hurricane.model.Patient');
 
         form.reset();
         form.loadRecord(newRecord);
     },
 
-    onPanelAfterRender: function(component, eOpts) {
+    onPanelAfterRender: function (component, eOpts) {
         var form = Ext.getCmp('frmAddPatient').getForm().findField('Name').focus();
     }
 

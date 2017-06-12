@@ -75,7 +75,7 @@ Ext.define('hurricane.view.Dateneingabe', {
                         {
                             // columnWidth:0.5,
                             xtype: 'addpatient',
-                            maxWidth: 300,
+                            // maxWidth: 300,
                             flex: 1
                         }
                     ]

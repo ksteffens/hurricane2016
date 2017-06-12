@@ -1,4 +1,6 @@
 <?php
+ini_set("error_log", "/vagrant/php_error.log");
+
 /**
  * Created by PhpStorm.
  * User: ksteffens
