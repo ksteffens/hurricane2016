@@ -105,7 +105,7 @@ Ext.define('hurricane.view.EditPatient', {
                                 },
                                 {
                                     xtype: 'combobox',
-                                    id: 'frmFldGeschlecht',
+                                    id: 'frmEditFldGeschlecht',
                                     fieldLabel: 'Geschlecht',
                                     name: 'GeschlechtID',
                                     readOnly: false,
@@ -163,15 +163,16 @@ Ext.define('hurricane.view.EditPatient', {
         afterrender: 'onWindowAfterRender'
     },
 
-    onWindowAfterRender: function(component, eOpts) {
+    onWindowAfterRender: function (component, eOpts) {
         Ext.getCmp('frmEditPatient').loadRecord(component.record);
-        var combo = Ext.getCmp('frmFldGeschlecht');
+        var combo = Ext.getCmp('frmEditFldGeschlecht');
         var arr = [];
-        var store = Ext.getStore('Protokoll').load({
-            callback : function(records, options, success) {
+        var store = Ext.getStore('Patient').load({
+            callback: function (records, options, success) {
                 if (success) {
-                    store.each(function(record){
-                        if (record.data. PatientenID === component.record.data.patientID) {
+                    store.each(function (record) {
+                        debugger;
+                        if (record.data.patientID === component.record.data.patientID) {
                             Ext.getCmp('patientenPanel').add(Ext.create('hurricane.view.showProtokoll', {
                                 record: record,
                                 title: record.data.PatientenNummer
@@ -181,7 +182,6 @@ Ext.define('hurricane.view.EditPatient', {
                 }
             }
         });
-
         combo.setValue(component.record.data.GeschlechtID);
 
     }

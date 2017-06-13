@@ -33,7 +33,7 @@ class ProtokollQuery
     public function readProtokoll($params) {
         $_db = $this->_db;
 
-        $_result = $_db->query("SELECT * FROM `protokoll`") or
+        $_result = $_db->query("SELECT * FROM `patient`") or
         die('Connection Error ProtokollQuery: ' . $_db->connect_error);
         $results = array();
 

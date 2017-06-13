@@ -160,7 +160,7 @@ Ext.define('hurricane.view.addPatient', {
                                     xtype: 'textfield',
                                     hidden: true,
                                     id: 'fldProtokollID',
-                                    width: 200,
+                                    // width: 200,
                                     fieldLabel: 'Protokoll Id',
                                     hideLabel: true,
                                     name: 'ProtokollID',
