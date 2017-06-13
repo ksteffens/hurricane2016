@@ -18,14 +18,16 @@ Ext.define('hurricane.view.EditPatient', {
     alias: 'widget.editpatient',
 
     requires: [
-        'hurricane.view.EditPatientViewModel',
-        'hurricane.view.EditPatientViewController',
+        'Ext.button.Button',
+        'Ext.form.Panel',
+        'Ext.form.field.ComboBox',
+        'Ext.form.field.Date',
+        'Ext.form.field.Display',
         'Ext.tab.Panel',
         'Ext.tab.Tab',
-        'Ext.form.Panel',
-        'Ext.form.field.Display',
-        'Ext.form.field.Date',
-        'Ext.form.field.ComboBox'
+        'Ext.window.Window',
+        'hurricane.view.EditPatientViewController',
+        'hurricane.view.EditPatientViewModel'
     ],
 
     controller: 'editpatient',
@@ -171,11 +173,20 @@ Ext.define('hurricane.view.EditPatient', {
             callback: function (records, options, success) {
                 if (success) {
                     store.each(function (record) {
-                        debugger;
                         if (record.data.patientID === component.record.data.patientID) {
                             Ext.getCmp('patientenPanel').add(Ext.create('hurricane.view.showProtokoll', {
                                 record: record,
                                 title: record.data.PatientenNummer
+                            }));
+                            // Ext.getCmp('patientenPanel').add({
+                            //     // html: 'Hallo Welt',
+                            //     iconCls: 'fa fa-file',
+                            //     title: 'Original',
+                            //     src: 'resources/Protokolle/0001.pdf'
+                            // });
+                            Ext.getCmp('patientenPanel').add(Ext.create('Ext.window.Window', {
+                                src: 'resources/Protokolle/0001.pdf',
+                                title: 'test'
                             }));
                         }
                     });

@@ -35,10 +35,8 @@ class StatistikQuery
     {
         $_db = $this->_db;
 
-        return null;
-
         $sql = 'select p.AufnahmeID, a.Beschreibung, count(1) as Anzahl
-                from Protokoll p, Aufnahme a
+                from patient p, aufnahme a
                 WHERE a.AufnahmeID = p.AufnahmeID
                 group by p.AufnahmeID';
 
@@ -58,10 +56,8 @@ class StatistikQuery
     {
         $_db = $this->_db;
 
-        return null;
-
         $sql = 'select p.DiagnoseID, d.Stichwort as Beschreibung , count(1) as Anzahl
-                from Protokoll p, Diagnoseschluessel d
+                from patient p, diagnoseschluessel d
                 WHERE d.DiagnoseID = p.DiagnoseID
                 group by p.DiagnoseID';
 
@@ -81,10 +77,8 @@ class StatistikQuery
     {
         $_db = $this->_db;
 
-        return null;
-
         $sql = 'select p.AbgangID, a.Beschreibung, count(1) as Anzahl
-                from Protokoll p, Abgang a
+                from patient p, abgang a
                 WHERE a.AbgangID = p.AbgangID
                 group by p.AbgangID';
 
@@ -103,11 +97,9 @@ class StatistikQuery
     public function getGeschlecht()
     {
         $_db = $this->_db;
-
-        return null;
-
+        
         $sql = 'select p.GeschlechtID, g.Beschreibung, count(1) as Anzahl
-                from Patient p, Geschlecht g
+                from patient p, geschlecht g
                 WHERE g.GeschlechtID = p.GeschlechtID
                 group by p.GeschlechtID';
 
