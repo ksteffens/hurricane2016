@@ -18,18 +18,25 @@ Ext.define('hurricane.view.Statistik', {
     alias: 'widget.statistik',
 
     requires: [
-        'hurricane.view.StatistikViewModel',
-        'hurricane.view.StatistikViewController',
-        'Ext.tab.Tab',
-        'Ext.form.field.Display',
-        'Ext.chart.PolarChart',
-        'Ext.chart.series.Pie',
-        'Ext.chart.series.sprite.PieSlice',
-        'Ext.chart.interactions.Rotate',
         'Ext.chart.CartesianChart',
+        'Ext.chart.PolarChart',
         'Ext.chart.axis.Category',
         'Ext.chart.axis.Numeric',
-        'Ext.chart.series.Bar'
+        'Ext.chart.interactions.Rotate',
+        'Ext.chart.series.Bar',
+        'Ext.chart.series.Pie',
+        'Ext.chart.series.sprite.PieSlice',
+        'Ext.container.Container',
+        'Ext.form.field.Display',
+        'Ext.layout.container.Fit',
+        'Ext.panel.Panel',
+        'Ext.tab.Tab',
+        'hurricane.store.StatistikAbgang',
+        'hurricane.store.StatistikAufnahme',
+        'hurricane.store.StatistikDiagnose',
+        'hurricane.store.StatistikGeschlecht',
+        'hurricane.view.StatistikViewController',
+        'hurricane.view.StatistikViewModel'
     ],
 
     controller: 'statistik',
@@ -48,19 +55,19 @@ Ext.define('hurricane.view.Statistik', {
                 afterrender: 'onPanelAfterRender'
             },
             items: [
-                {
-                    xtype: 'container',
-                    padding: '50 0 0 50',
-                    items: [
-                        {
-                            xtype: 'displayfield',
-                            id: 'txtPatientGesamt',
-                            fieldLabel: 'Gesamt Behandlungen',
-                            labelWidth: 150,
-                            value: 'Display Field'
-                        }
-                    ]
-                },
+                // {
+                //     xtype: 'container',
+                //     padding: '50 0 0 50',
+                //     items: [
+                //         {
+                //             xtype: 'displayfield',
+                //             id: 'txtPatientGesamt',
+                //             fieldLabel: 'Gesamt Behandlungen',
+                //             labelWidth: 150,
+                //             value: 'Display Field'
+                //         }
+                //     ]
+                // },
                 {
                     xtype: 'polar',
                     minHeight: 100,
@@ -136,14 +143,6 @@ Ext.define('hurricane.view.Statistik', {
                     series: [
                         {
                             type: 'bar',
-                            highlight: {
-                                strokeStyle: 'black',
-                                fillStyle: 'gold',
-                                lineDash: [
-                                    5,
-                                    3
-                                ]
-                            },
                             label: {
                                 field: 'Anzahl',
                                 display: 'insideEnd'
@@ -207,14 +206,6 @@ Ext.define('hurricane.view.Statistik', {
                     series: [
                         {
                             type: 'bar',
-                            highlight: {
-                                strokeStyle: 'black',
-                                fillStyle: 'gold',
-                                lineDash: [
-                                    5,
-                                    3
-                                ]
-                            },
                             label: {
                                 field: 'Anzahl',
                                 display: 'insideEnd'
@@ -273,14 +264,6 @@ Ext.define('hurricane.view.Statistik', {
                     series: [
                         {
                             type: 'bar',
-                            highlight: {
-                                strokeStyle: 'black',
-                                fillStyle: 'gold',
-                                lineDash: [
-                                    5,
-                                    3
-                                ]
-                            },
                             label: {
                                 field: 'Anzahl',
                                 display: 'insideEnd'
