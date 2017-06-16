@@ -19,15 +19,21 @@ Ext.define('hurricane.view.EditPatient', {
 
     requires: [
         'Ext.button.Button',
+        'Ext.container.Container',
         'Ext.form.Panel',
         'Ext.form.field.ComboBox',
         'Ext.form.field.Date',
         'Ext.form.field.Display',
+        'Ext.form.field.Text',
+        'Ext.layout.container.HBox',
+        'Ext.panel.Panel',
         'Ext.tab.Panel',
-        'Ext.tab.Tab',
         'Ext.window.Window',
+        'hurricane.store.Geschlecht',
         'hurricane.view.EditPatientViewController',
-        'hurricane.view.EditPatientViewModel'
+        'hurricane.view.EditPatientViewModel',
+        'hurricane.view.showPdf',
+        'hurricane.view.showProtokoll'
     ],
 
     controller: 'editpatient',
@@ -178,15 +184,10 @@ Ext.define('hurricane.view.EditPatient', {
                                 record: record,
                                 title: record.data.PatientenNummer
                             }));
-                            // Ext.getCmp('patientenPanel').add({
-                            //     // html: 'Hallo Welt',
-                            //     iconCls: 'fa fa-file',
-                            //     title: 'Original',
-                            //     src: 'resources/Protokolle/0001.pdf'
-                            // });
-                            Ext.getCmp('patientenPanel').add(Ext.create('Ext.window.Window', {
+                            Ext.getCmp('patientenPanel').add(Ext.create('hurricane.view.showPdf', {
                                 src: 'resources/Protokolle/0001.pdf',
-                                title: 'test'
+                                iconCls: 'fa fa-file',
+                                title: 'Protokoll'
                             }));
                         }
                     });

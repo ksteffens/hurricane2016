@@ -26,8 +26,6 @@ Ext.define('hurricane.view.DateneingabeViewController', {
             newRecord = Ext.create('hurricane.model.Patient'),
             store = Ext.getStore('Patient');
 
-        debugger;
-
         if (form.isValid()) {
             form.updateRecord();
             var temp = store.add(form.getRecord());

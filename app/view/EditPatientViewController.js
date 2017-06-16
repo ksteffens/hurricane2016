@@ -75,7 +75,7 @@ Ext.define('hurricane.view.EditPatientViewController', {
         } else {
             form.getForm().findField("DiagnoseSonstiges").hide();
         }
-    },
+    }
 
 
 });
