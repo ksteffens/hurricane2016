@@ -30,7 +30,8 @@ NN="NoName"
 EXT=".pdf"
 
 # Values for OCR zones
-UZN_ID="2012 220 200 160 Protokoll"
+UZN_ID="2060 200 210 160 Protokoll"
+#UZN_ID="2012 220 200 160 Protokoll"
 UZN_MM="1500 50 250 50 Month" # not tested
 UZN_YYYY="1700 50 250 50 Year" # not tested
 
@@ -166,8 +167,15 @@ function uzn_ID {
 #
 
 	cat ID_$base.txt | tr l 1 > ID_$base.txt2
-	persid=$(grep -P '[0-9]{4,8}' ID_$base.txt2)
+	cat ID_$base.txt2
+	cat ID_$base.txt
+
+	#persid=$(grep -P '[0-9]{0,8}' ID_$base.txt2)
+	persid=$(cat ID_$base.txt2 | tr -dc '0-9')
+	# | cut -d " " -f 1)
+	echo $persid
 	rm -f ID_$base.txt*
+
 }
 
 function uzn_MM {
@@ -264,6 +272,6 @@ function mergeSameIDs {
 
 cd $WORKINGPATH
 createWorkingArea
-mergeSameIDs
+#mergeSameIDs
 echo "$(date +%F_%T) END"
 exit

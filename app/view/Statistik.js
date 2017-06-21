@@ -55,19 +55,19 @@ Ext.define('hurricane.view.Statistik', {
                 afterrender: 'onPanelAfterRender'
             },
             items: [
-                // {
-                //     xtype: 'container',
-                //     padding: '50 0 0 50',
-                //     items: [
-                //         {
-                //             xtype: 'displayfield',
-                //             id: 'txtPatientGesamt',
-                //             fieldLabel: 'Gesamt Behandlungen',
-                //             labelWidth: 150,
-                //             value: 'Display Field'
-                //         }
-                //     ]
-                // },
+                {
+                    xtype: 'container',
+                    padding: '50 0 0 50',
+                    items: [
+                        {
+                            xtype: 'displayfield',
+                            id: 'txtPatientGesamt',
+                            fieldLabel: 'Gesamt Behandlungen',
+                            labelWidth: 150,
+                            value: 'Display Field'
+                        }
+                    ]
+                },
                 {
                     xtype: 'polar',
                     minHeight: 100,

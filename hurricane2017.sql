@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Erstellungszeit: 09. Jun 2017 um 13:24
+-- Erstellungszeit: 21. Jun 2017 um 21:20
 -- Server Version: 5.5.55-0ubuntu0.14.04.1
 -- PHP-Version: 5.5.9-1ubuntu4.21
 
@@ -142,19 +142,40 @@ INSERT INTO `geschlecht` (`GeschlechtID`, `Beschreibung`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `patient` (
-  `patientID` int(11) NOT NULL DEFAULT '0',
+  `patientID` int(11) NOT NULL AUTO_INCREMENT,
   `Vorname` varchar(100) NOT NULL,
   `Geburtsdatum` date NOT NULL,
   `Strasse` varchar(100) NOT NULL,
   `PLZ` varchar(10) NOT NULL,
   `Ort` varchar(100) NOT NULL,
   `GeschlechtID` int(11) NOT NULL,
+  `Name` varchar(200) NOT NULL,
+  `EingangsDatum` date NOT NULL,
+  `PatientenNummer` varchar(5) NOT NULL,
+  `AufnahmeZeit` time NOT NULL,
+  `AufnahmeID` int(11) NOT NULL,
+  `AufnahmeKTW` varchar(10) NOT NULL,
+  `AbgangZeit` time NOT NULL,
+  `AbgangID` int(11) NOT NULL,
+  `AbgangUebergabe` varchar(10) NOT NULL,
+  `AbgangZiel` varchar(20) NOT NULL,
+  `DiagnoseID` int(11) NOT NULL,
+  `DiagnoseSonstiges` varchar(50) NOT NULL,
+  `HelferNr1` int(11) NOT NULL,
+  `HelferNr2` int(11) NOT NULL,
   PRIMARY KEY (`patientID`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Daten für Tabelle `patient`
+--
+
+INSERT INTO `patient` (`patientID`, `Vorname`, `Geburtsdatum`, `Strasse`, `PLZ`, `Ort`, `GeschlechtID`, `Name`, `EingangsDatum`, `PatientenNummer`, `AufnahmeZeit`, `AufnahmeID`, `AufnahmeKTW`, `AbgangZeit`, `AbgangID`, `AbgangUebergabe`, `AbgangZiel`, `DiagnoseID`, `DiagnoseSonstiges`, `HelferNr1`, `HelferNr2`) VALUES
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
 
 # Rechte für `hurricane`@`localhost`
 
